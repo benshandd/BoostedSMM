@@ -49,9 +49,7 @@ endif;
 endif;
 
 endforeach;
-else:
-
-
-endif;
-
+} else {
+    // Handle error: No form data submitted
+}
 	   

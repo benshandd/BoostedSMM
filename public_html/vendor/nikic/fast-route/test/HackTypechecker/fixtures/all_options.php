@@ -1,5 +1,5 @@
-<?hh
-
+/*<?hh
+/*
 namespace FastRoute\TestFixtures;
 
 function all_options_simple(): \FastRoute\Dispatcher {
@@ -26,4 +26,6 @@ function all_options_cached(): \FastRoute\Dispatcher {
         'cacheDisabled' => false,
       ),
     );
+    
 }
+*/;

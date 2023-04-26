@@ -1,5 +1,5 @@
 <?hh
-
+/*
 namespace FastRoute\TestFixtures;
 
 function no_options_simple(): \FastRoute\Dispatcher {
@@ -9,3 +9,4 @@ function no_options_simple(): \FastRoute\Dispatcher {
 function no_options_cached(): \FastRoute\Dispatcher {
     return \FastRoute\cachedDispatcher($collector ==> {});
 }
+*/;

@@ -12,6 +12,7 @@ namespace PHPUnit\Framework\MockObject\Builder;
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  */
+/*
 interface Match extends Stub
 {
     /**
@@ -22,5 +23,6 @@ interface Match extends Stub
      *
      * @return Stub
      */
-    public function after($id);
+    /*public function after($id);
 }
+*/

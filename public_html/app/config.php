@@ -8,6 +8,7 @@ define('PATH', realpath('.'));
 define('SUBFOLDER', false);
 define('URL', "https://boostedsmm.com");
 define('STYLESHEETS_URL', "//boostedsmm.com");
+define('URL', "https://localhost/BoostedSMM/public_html/");
 error_reporting(1);
 date_default_timezone_set('Asia/Kolkata');
 
