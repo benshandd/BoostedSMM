@@ -1,0 +1,259 @@
+[21-Oct-2022 11:38:21 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on bool in /home/smmpanel/public_html/xdark/index.php:310
+Stack trace:
+#0 {main}
+  thrown in /home/smmpanel/public_html/xdark/index.php on line 310
+[21-Oct-2022 11:40:23 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "404.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('404.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('404.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('404.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('404.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(413): Twig_Environment->render('404.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[21-Oct-2022 11:42:23 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "404.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('404.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('404.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('404.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('404.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(413): Twig_Environment->render('404.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[21-Oct-2022 11:44:23 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "404.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('404.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('404.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('404.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('404.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(413): Twig_Environment->render('404.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[21-Oct-2022 11:57:06 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "logout.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('logout.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('logout.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('logout.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('logout.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('logout.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[21-Oct-2022 11:57:32 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on bool in /home/smmpanel/public_html/xdark/index.php:310
+Stack trace:
+#0 {main}
+  thrown in /home/smmpanel/public_html/xdark/index.php on line 310
+[24-Oct-2022 11:47:38 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "logout.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('logout.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('logout.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('logout.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('logout.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('logout.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[24-Oct-2022 11:47:46 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "logout.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('logout.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('logout.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('logout.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('logout.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('logout.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[24-Oct-2022 11:50:37 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on bool in /home/smmpanel/public_html/xdark/index.php:310
+Stack trace:
+#0 {main}
+  thrown in /home/smmpanel/public_html/xdark/index.php on line 310
+[24-Oct-2022 11:51:44 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Class 'CoinpaymentsAPI' not found in /home/smmpanel/public_html/xdark/app/controller/addfunds.php:273
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/index.php(100): require()
+#1 {main}
+  thrown in /home/smmpanel/public_html/xdark/app/controller/addfunds.php on line 273
+[24-Oct-2022 17:00:47 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "logout.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('logout.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('logout.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('logout.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('logout.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('logout.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[25-Oct-2022 00:03:55 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "logout.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('logout.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('logout.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('logout.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('logout.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('logout.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[25-Oct-2022 23:44:08 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "logout.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('logout.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('logout.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('logout.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('logout.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('logout.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[26-Oct-2022 09:05:45 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "404.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('404.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('404.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('404.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('404.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('404.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[26-Oct-2022 09:06:08 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "404.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('404.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('404.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('404.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('404.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('404.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[26-Oct-2022 09:06:45 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "404.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('404.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('404.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('404.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('404.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('404.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[26-Oct-2022 09:07:33 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "404.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('404.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('404.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('404.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('404.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('404.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[26-Oct-2022 09:09:13 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "404.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('404.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('404.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('404.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('404.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('404.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[30-Oct-2022 05:55:01 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "logout.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('logout.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('logout.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('logout.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('logout.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('logout.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[30-Oct-2022 06:16:11 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "logout.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('logout.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('logout.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('logout.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('logout.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('logout.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[30-Oct-2022 06:16:19 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "logout.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('logout.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('logout.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('logout.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('logout.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('logout.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[30-Oct-2022 06:19:04 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "404.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('404.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('404.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('404.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('404.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('404.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[30-Oct-2022 06:21:04 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "404.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('404.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('404.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('404.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('404.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('404.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[30-Oct-2022 06:23:04 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "404.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('404.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('404.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('404.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('404.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('404.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[30-Oct-2022 06:25:04 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "404.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('404.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('404.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('404.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('404.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('404.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[30-Oct-2022 06:27:04 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "404.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('404.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('404.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('404.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('404.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('404.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[30-Oct-2022 21:08:53 Asia/Kolkata] PHP Fatal error:  Uncaught Twig_Error_Loader: Unable to find template "logout.twig" (looked into: /home/smmpanel/public_html/xdark/app/views/ccc). in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php:226
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php(143): Twig_Loader_Filesystem->findTemplate('logout.twig')
+#1 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(270): Twig_Loader_Filesystem->getCacheKey('logout.twig')
+#2 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(350): Twig_Environment->getTemplateClass('logout.twig')
+#3 /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Environment.php(289): Twig_Environment->loadTemplate('logout.twig')
+#4 /home/smmpanel/public_html/xdark/index.php(300): Twig_Environment->render('logout.twig', Array)
+#5 {main}
+  thrown in /home/smmpanel/public_html/xdark/vendor/twig/twig/lib/Twig/Loader/Filesystem.php on line 226
+[31-Oct-2022 04:13:17 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on bool in /home/smmpanel/public_html/xdark/index.php:310
+Stack trace:
+#0 {main}
+  thrown in /home/smmpanel/public_html/xdark/index.php on line 310
+[31-Oct-2022 04:13:35 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Class 'CoinpaymentsAPI' not found in /home/smmpanel/public_html/xdark/app/controller/addfunds.php:273
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/index.php(100): require()
+#1 {main}
+  thrown in /home/smmpanel/public_html/xdark/app/controller/addfunds.php on line 273
+[31-Oct-2022 04:55:51 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Class 'CoinpaymentsAPI' not found in /home/smmpanel/public_html/xdark/app/controller/addfunds.php:273
+Stack trace:
+#0 /home/smmpanel/public_html/xdark/index.php(100): require()
+#1 {main}
+  thrown in /home/smmpanel/public_html/xdark/app/controller/addfunds.php on line 273
+[15-Dec-2022 00:59:02 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/boosteds/public_html/app/init.php on line 3
+[15-Dec-2022 06:29:02 Asia/Kolkata] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/boosteds/public_html/app/helper/data_control.php:232
+Stack trace:
+#0 /home/boosteds/public_html/app/helper/data_control.php(232): PDOStatement->execute(Array)
+#1 /home/boosteds/public_html/index.php(24): countRow(Array)
+#2 {main}
+  thrown in /home/boosteds/public_html/app/helper/data_control.php on line 232
+[15-Dec-2022 01:00:04 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/boosteds/public_html/app/init.php on line 3
+[15-Dec-2022 06:30:24 Asia/Kolkata] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/boosteds/public_html/app/helper/data_control.php:232
+Stack trace:
+#0 /home/boosteds/public_html/app/helper/data_control.php(232): PDOStatement->execute(Array)
+#1 /home/boosteds/public_html/index.php(24): countRow(Array)
+#2 {main}
+  thrown in /home/boosteds/public_html/app/helper/data_control.php on line 232
+[15-Dec-2022 01:01:02 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/boosteds/public_html/app/init.php on line 3
+[15-Dec-2022 06:31:02 Asia/Kolkata] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/boosteds/public_html/app/helper/data_control.php:232
+Stack trace:
+#0 /home/boosteds/public_html/app/helper/data_control.php(232): PDOStatement->execute(Array)
+#1 /home/boosteds/public_html/index.php(24): countRow(Array)
+#2 {main}
+  thrown in /home/boosteds/public_html/app/helper/data_control.php on line 232

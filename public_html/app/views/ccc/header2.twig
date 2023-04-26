@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if pagetitle %}  {{ pagetitle }}  {% else %} {{ title }} {% endif %} </title>
+  <meta name="keywords" content="{% if pagekeywords %} {{ pagekeywords }} {% else %} {{ site["keywords"]}}  {% endif %}">
+  <meta name="description" content="{% if pagedescription %} {{ pagedescription }} {% else %} {{ site['description'] }}  {% endif %}">
+  {% if site['favicon'] %}
+		  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+		   {% endif %}
+    {#<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />#}
+
+		{#<link rel="shortcut icon" type="image/ico" href="https://cdn.mypanel.link/fsvxaw/ykbnyw4gi9b966bg.png"/>#}
+		  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    {#<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />#}
+
+
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "f6872f63-cb77-4240-a74b-0b7f6c5ec6e5",
+      safari_web_id: "web.onesignal.auto.0654afc0-ce06-4b31-9757-37165e976417",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+OneSignal.push(function() {
+  OneSignal.showSlidedownPrompt();
+});
+</script><style>.integration-fixed{position:fixed;z-index:10000000}.integration-fixed__top-left{top:0;left:0}.integration-fixed__top-right{top:0;right:0}.integration-fixed__bottom-left{bottom:0;left:0}.integration-fixed__bottom-right{bottom:0;right:0}
+</style>
+
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "f6872f63-cb77-4240-a74b-0b7f6c5ec6e5",
+      safari_web_id: "web.onesignal.auto.0654afc0-ce06-4b31-9757-37165e976417",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+OneSignal.push(function() {
+  OneSignal.showSlidedownPrompt();
+});
+</script>
+
+<script>
+        (function(w,d,s,r,n){w.TrustpilotObject=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
+            a=d.createElement(s);a.async=1;a.src=r;a.type='text/java'+s;f=d.getElementsByTagName(s)[0];
+            f.parentNode.insertBefore(a,f)})(window,document,'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
+            tp('register', 'm40ItwiIqlrTL7Ii');
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FGHZ53BH9W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FGHZ53BH9W');
+</script>
+		
+  				<link rel="stylesheet" type="text/css" href="../script/cdn.mypanel.link/fsvxaw/op5g4nbqmp8nzepb.css">
+					<link rel="stylesheet" type="text/css" href="../script/cdn.mypanel.link/fsvxaw/33j3i14zsylh56wz.css">
+					<link rel="stylesheet" type="text/css" href="../script/cdn.mypanel.link/libs/bootstrap-datetimepicker/4.17.47/bootstrap-datetimepicker.min.css">
+					<link rel="stylesheet" type="text/css" href="../script/cdn.mypanel.link/css/font-awesome/css/all.min.css">
+					<link rel="stylesheet" type="text/css" href="../script/cdn.mypanel.link/global/c3gyq3shygmabbke.css">
+		</head>
+
+<body>
+  		
+            
+     <!-- if user login use 'dashboard-root' class instead root 'class' -->
+    <div class="root">
+        <header id="header" class="header">
+            <div class="b-menu-wrapper">
+                <button class="b-menu-close" onclick="noAuthMenu()">
+                    <i class="ri-close-line"></i>
+                </button>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-auto d-none d-lg-block">
+                            <div class="logo">
+                              <a href="/">
+                                <img src="{{ site['logo'] }}" alt=" Logo">
+                              </a>
+                            </div>
+                        </div>
+                        <div class="col text-center">
+                            <ul class="nmenu">
+                                <li class="nmenu-item">
+                                    <a href="/" class="nmenu-link  active ">
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="nmenu-item">
+                                    <a href="/services" class="nmenu-link ">
+                                        Services
+                                    </a>
+                                </li>
+                                <li class="nmenu-item">
+                                    <a href="/api" class="nmenu-link ">
+                                        API
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div><!-- ./col -->
+                        <div class="col-lg-auto col-12">
+                            <a href="/" class="btn head-right-btns">
+                                Login
+                            </a>
+                            <a href="/signup" class="btn btn-primary btn-border btn head-right-btns">
+                                <i class="ri-login-circle-line me-2 icon"></i>
+                                <span>Sign Up</span>
+                            </a>
+                        </div>
+                    </div><!-- ./row -->
+                </div>
+            </div>
+            <div class="sm-header">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <a href="/">
+                                <img src="{{ site['logo'] }}" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <button class="menu-btn" onclick="noAuthMenu()">
+                                <i class="ri-menu-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+     <!-- THEME CLONE BY NO_NAME -->                

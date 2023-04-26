@@ -1,0 +1,99 @@
+{% include 'header.twig' %}
+
+<div class="app-content blog-inner">
+	<div class="container">
+		<section class="bi-head-wrapper">
+			<div class="bi-head-box">
+				<div class="bi-head-bg">
+					<img src="{{blogimage}}" alt="">
+				</div>
+				<div class="bi-head-content">
+					<div class="bi-cat-wrapper">
+						<a href="boostedsmm.com/blog" class="bi-cat">
+							Blog
+						</a>
+					</div>
+					<div class="bi-title">
+						<h1>{{blogtitle}}</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="blog-content">
+			<div class="card card-border">
+				<div class="card-body p-4">
+					{{blogcontent}}
+				</div>
+			</div>
+		</section>
+		<section class="share-content" style="margin-bottom: 30px;">
+			<div class="card card-border">
+				<div class="card-body p-4">
+					<div class="row">
+						<div class="col-md-6 d-flex align-items-center">
+							<div class="text-left mr-3">
+								<h4>Share on social media:</h4>
+							</div>
+						</div>
+						<div class="col-md-6 d-flex justify-content-end align-items-center">
+							<div class="social-icons d-flex">
+								<a href="https://twitter.com/intent/tweet?text={{blogtitle}} - &url=boostedsmm.com/blog/{{getblog}}" class="social-icon twitter" title="Twitter" target="_blank">
+									<i class="fab fa-twitter fa-2x"></i>
+								</a>
+								<a href="https://www.reddit.com/submit?url=Check out BoostedSMM's blog! boostedsmm.com/blog/{{getblog}}&title={{blogtitle}}" class="social-icon reddit" title="Reddit" target="_blank">
+	<i class="fab fa-reddit fa-2x"></i>
+</a>
+<a href="https://t.me/share/url?url=boostedsmm.com/blog/{{getblog}}&text=Check out BoostedSMM's blog!" class="social-icon telegram" title="Telegram" target="_blank">
+	<i class="fab fa-telegram fa-2x"></i>
+</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bi-about-cloutsy">
+			<div class="card card-border">
+				<div class="card-body p-4">
+					<div class="row align-items-center">
+						<div class="col-auto d-none d-lg-block">
+							<div class="bi-about-avatar">
+								<img src="https://cdn.smmspot.net/cloutsy/assets/img/avatar.png" alt="Avatar">
+							</div>
+						</div>
+						<div class="col-lg">
+							<h3 class="bia-title">About
+								<span class="p-color">{{ site["site_name"] }}
+								</span>
+							</h3>
+							<p class="bia-text">
+								{{ site["site_name"] }}
+								provides hundreds of services that will get you to your goal
+such as very
+cheap and high quality followers, subscribers, likes and views.
+							</p>
+						</div>
+						<div class="col-lg-auto mt-3 mt-lg-0">
+							<a href="/signup" class="btn btn-primary btn-border d-flex align-items-center">
+								<span>Sign up and Start Today!</span>
+								<i class="ri-arrow-right-line ms-3"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+<style>
+	.social-icons a {
+		margin-right: 50px; /* Space out the icons */
+		transition: all 0.3s ease-in-out; /* Add a transition effect */
+	}
+
+	.social-icons a:hover {
+		transform: scale(1.1); /* Increase the size of the icon on hover */
+	}
+</style>
+{% include 'footer.twig' %}

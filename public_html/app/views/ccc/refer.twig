@@ -1,0 +1,166 @@
+{% include 'header.twig' %}
+
+
+
+<div class="app-content">
+    <div id="PageTitle">Affiliate Program</div>
+    <div class="container-fluid">
+        <section class="dashboard-head-wrapper">
+            <div class="dashboard-head card-border">
+              <img src="https://cdn.mypanel.link/fsvxaw/jy4zpe9929sfe0cm.png" 
+                     class="mascot-img" />
+                <div class="dhead-body">
+                    <h2 class="title">
+                        View Our Affiliate Program
+                    </h2>
+                    <p class="text">
+                        Want to make some extra money? We pay 10% for LIFETIME on anyone you refer to us. Copy your link below, promote it, then get paid!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="afp-top">
+            <div class="card card-border">
+                <div class="card-body p-4 px-lg-5">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <span class="cp-exclamation">!</span>
+                        </div>
+                        <div class="col">
+                            <span class="afp-ftext">Payouts can be made via: BTC, Crypto, PayPal, Invoice + Wire
+                                Transfer</span>
+                        </div>
+                                                                  </div>
+                </div>
+            </div>
+        </section>
+        <section class="afp-bot">
+            <div class="card card-border">
+                <div class="card-header">
+                    <div class="row row-cols-md-2">
+                        <div class="col-lg">
+                            <div class="aft-item">
+                                <div class="icon">
+                                    <div class="dh-icon icon-warning">
+                                        <i class="ri-user-4-line"></i>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h3 class="title">Username</h3>
+                                    <div class=text>unlock</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {% if error %}
+					<div class="alert alert-dismissible alert-danger">
+						{{ errorText }}
+					</div>
+					<br>
+				{% endif %}
+
+				{% if success %}
+					<div class="alert alert-dismissible alert-success">
+						{{ successText }}
+					</div>
+					<br>
+				{% endif %}
+				
+				
+				
+                        <div class="col-lg-4">
+                            <div class="aft-item">
+                                <div class="icon">
+                                    <div class="dh-icon icon-secondary">
+                                        <i class="ri-user-4-line"></i>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h3 class="title">Referral Link</h3>
+                                    <div class=text>{{ site["url"] }}/affiliates?ref={{ user['ref_code'] }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="aft-item">
+                                <div class="icon">
+                                    <div class="dh-icon icon-primary">
+                                        <i class="ri-user-4-line"></i>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h3 class="title">Comission Rate</h3>
+                                    <div class=text>{{settings["referral_commision"]}}%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="aft-item">
+                                <div class="icon">
+                                    <div class="dh-icon icon-danger">
+                                        <i class="ri-user-4-line"></i>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h3 class="title">Minimum Payout</h3>
+                                    <div class=text>{{ currency['symbol']}} {{ (settings["referral_payout"]*currency["value"]) }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- ./row -->
+                </div><!-- ./card-header -->
+       <div class="card-body">
+           
+           
+           
+           
+                    <div class="row row-cols-xxl-6 aft-box-row">
+                        <div class="col">
+                            <div class="aft-box">
+                                <h4 class="title">Visits</h4>
+                                <div class="text">{{ ref['referral_clicks'] }}</div>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col">
+                            <div class="aft-box">
+                                <h4 class="title">Registrations</h4>
+                                <div class="text">{{ ref['referral_sign_up'] }}</div>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col">
+                            <div class="aft-box">
+                                <h4 class="title">Referrals</h4>
+                                <div class="text">{{ ref['referral_sign_up'] }}</div>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col">
+                            <div class="aft-box">
+                                <h4 class="title">Converation Rate</h4>
+                                <div class="text">{{ ( ref['referral_sign_up'] / ref['referral_clicks']) * 100 }}%</div>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col">
+                            <div class="aft-box">
+                                <h4 class="title">Total Earnings</h4>
+                                <div class="text">{{ currency['symbol'] }}{{ ref['referral_total_commision']*currency["value"] }}</div>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col">
+                            <div class="aft-box">
+                                <h4 class="title">Available Earnings</h4>
+                                <div class="text">{{ currency['symbol'] }}{{ (ref['referral_total_commision'] - (ref['referral_earned_commision']  +  ref['referral_requested_commision'] +  ref['referral_rejected_commision'])) *currency["value"] }}</div>
+                            </div>
+                        </div><!-- ./col -->
+                    </div>
+                </div><!-- ./card-body -->
+                                 
+                      
+
+                            </div><!-- ./card-body -->
+            </div><!-- ./card -->
+        </section>
+    </div>
+</div><!-- app-content -->
+
+
+{% include 'footer.twig' %}

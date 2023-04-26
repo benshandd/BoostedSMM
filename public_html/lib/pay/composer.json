@@ -1,0 +1,33 @@
+{
+    "name": "livelyworks/pay-page",
+    "repositories": [
+    ],
+    "require": {
+        "wixel/gump" : "1.11.0",
+        "instamojo/instamojo-php": "^0.4.0",
+        "yabacon/paystack-php": "2.1.23",
+        "razorpay/razorpay": "~2.5.0",
+        "iyzico/iyzipay-php": "~2.0.48",
+        "stripe/stripe-php": "7.37.1",
+        "authorizenet/authorizenet": "2.0.0",
+        "bitpay/php-client": "~2.2.20",
+        "mercadopago/dx-php": "~2.0",
+        "mollie/mollie-api-php": "~2.18.0",
+        "mashape/unirest-php": "^3.0.4",
+        "pagseguro/pagseguro-php-sdk": "~6.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "livelyworks/app/"
+        },
+        "exclude-from-classmap" : [
+            "/vendor/pagseguro/pagseguro-php-sdk/source/Domains/Requests/PaymentMethod.php",
+            "/vendor/bitpay/php-client/src/Bitpay/Client/Response.php"
+        ],
+        "files": [
+            "vendor-overrides/pagseguro/PaymentMethod.php",
+            "vendor-overrides/bitpay/Response.php",
+            "livelyworks/app/Support/app-helpers.php"
+        ]
+    }
+}

@@ -1,0 +1,131 @@
+{% include 'header.twig' %}
+
+
+	<div class="app-content">
+    <div id="PageTitle">Create Ticket</div>
+    <div class="container-fluid">
+        <section class="dashboard-head-wrapper">
+            <div class="dashboard-head card-border">
+              	<img src="https://cdn.mypanel.link/fsvxaw/fu4kmk7g2qq20ak3.png" 
+                     class="mascot-img" />
+                <div class="dhead-body">
+                    <h2 class="title">
+                        Welcome to Support
+                    </h2>
+                    <p class="text-2">
+                        Our team averages a response time of 0-15 minutes. LIVE Chat will respond within 2 minutes. All
+                        24 hours per day 7 days a week. Admins will respond within every 2 hours. We are here to work
+                        for you and your orders. Please let us know if you have any questions at all.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="sc-page">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card card-border">
+                        <div class="card-header">
+                            <h3 class="card-title">Create a Ticket</h3>
+                        </div>
+                        <div class="card-body">
+                            
+                            
+                            
+                            
+                            
+                            {% if error %}
+        <div class="alert alert-dismissible alert-danger {% if site['rtl'] %} rtl-alert {% endif %}">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          {{ errorText }}
+        </div>
+      {% elseif success %}
+        <div class="alert alert-dismissible alert-success {% if site['rtl'] %} rtl-alert {% endif %}">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          {{ successText }}
+        </div>
+      {% endif %}
+                            
+                            
+                            
+                            
+                            
+                            <form method="post" action="tickets">
+            <div class="form-group">
+              <label for="subject" class="control-label">{{ lang['tickets.subject'] }}</label>
+              
+<select  type="text" class="form-control" id="subject" name="subject">
+                                  <option  value="Order">Order</option>
+                                  <option  value="Service">Service</option>
+                                  <option  value="Child Panel">Child Panel</option>
+                                  <option  value="API">API</option>
+                                  <option  value="Bug Report">Bug Report</option>
+                                  <option  value="-Request">Request</option>
+                                  <option  value="Other">Other</option>
+                              </select>
+           </div>
+            <div class="form-group">
+              <label for="message" class="control-label">{{ lang['tickets.message'] }}</label>
+              <textarea class="form-control" rows="7" id="message" name="message">{{ data['message'] }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-border btn-block">{{ lang['tickets.button'] }}</button>
+          </form>
+          
+                        </div>
+                    </div>
+                </div><!-- ./col (create a ticket) -->
+                <div class="col-md-6">
+                    <div class="card card-border">
+                        <div class="card-header">
+                            <h4 class="card-title">Ticket History</h4>
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="row">
+                        <div class="col">
+                            <div class="tickets-list__margin-table">
+                                <div class="table-bg component_table ">
+                                    <div class="table-wr table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Subject</th>
+                                                <th>Status</th>
+                                                <th class="nowrap">Last update</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+<td colspan="9">
+              {% for ticket in ticketList %}
+                <tr>
+                  <td>{{ ticket['ticket_id'] }}</td>
+                  {% if ticket["support_new"] == 2 %}
+                    <td><a href="tickets/{{ ticket['ticket_id'] }}"><strong>{{ ticket['subject'] }}</strong></a></td>
+                  {% else %}
+                    <td><a href="tickets/{{ ticket['ticket_id'] }}">{{ ticket['subject'] }}</a></td>
+                  {% endif %}
+                  <td>{{ ticket['status'] }}</td>
+                  <td><span class="nowrap">{{ ticket['lastupdate_time'] }}</span></td>
+                </tr>
+              {% endfor %}
+</td>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+</div> </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div><!-- ./row -->
+        </section>
+    </div>
+</div>
+
+
+{% include 'footer.twig' %}

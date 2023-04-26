@@ -1,0 +1,95 @@
+ <div class="mobile-navbar">
+        <div class="mobile-navbar-content">
+            <a href="/" class="mnc-item">
+                <div class="mnc-item-icon">
+                    <i class="far fa-box-heart"></i>
+                </div>
+                <div class="mnc-item-text">New Order</div>
+            </a>
+            <a href="/addfunds" class="mnc-item">
+                <div class="mnc-item-icon">
+                    <i class="ri-exchange-dollar-line"></i>
+                </div>
+                <div class="mnc-item-text">Add Funds</div>
+            </a>
+            <a href="/tickets" class="mnc-item">
+                <div class="mnc-item-icon">
+                    <i class="ri-customer-service-2-line"></i>
+                </div>
+                <div class="mnc-item-text">Ticket</div>
+            </a>
+            <a href="/services" class="mnc-item">
+                <div class="mnc-item-icon">
+                    <i class="ri-list-check-2"></i>
+                </div>
+                <div class="mnc-item-text">Services</div>
+            </a>
+        </div>
+    </div>
+
+
+     <!-- THEME CLONE BY NO_NAME -->                
+
+     {# 			<script type="text/javascript"  src="https://cdn.mypanel.link/libs/jquery/1.12.4/jquery.min.js" >#}
+					{#		</script>#}
+					{#<script type="text/javascript"  src="https://cdn.mypanel.link/global/aknio8ec1fpphc0p.js" >#}
+					{#		</script>#}
+					{#<script type="text/javascript"  src="https://cdn.mypanel.link/global/nfos6j9mo1on7ksz.js" >#}
+					{#		</script>#}
+					{#<script type="text/javascript"  src="https://cdn.mypanel.link/global/aep5leer2lblx6nz.js" >#}
+					{#		</script>#}
+					<script type="text/javascript"  src="https://cdn.mypanel.link/global/6512pd498chdd7xk.js" >
+							</script>
+					<script type="text/javascript"  src="https://cdn.mypanel.link/fsvxaw/deemyq6wt6ekgyas.js" >
+							</script>
+					<script type="text/javascript"  src="https://cdn.mypanel.link/fsvxaw/xoupa5ojpygkpnk5.js" >
+							</script>
+					<script type="text/javascript" >
+				window.modules.layouts = {"theme_id":1,"auth":1,"live":true,"csrftoken":"5m9sbOvIxFLh5aDgtL4UBc-LoThPZqy6ftYK9C451_KkLSE_jPiQJ6mI8s3z0kF0leXTfw0o-vscoFCWb0yBgA=="};
+			</script>
+					
+					<script type="text/javascript" >
+				window.modules.select = [];
+			</script>
+					<script type="text/javascript" >
+							</script>
+		      
+      <!-- bootstrap javascript bundle -->
+<script src="https://cdn.smmspot.net/cloutsy/assets/js/bootstrap.bundle.min.js"></script>
+<!-- swiper.js -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<!-- actulus selectbox --> 
+<script src="https://cdn.smmspot.net/cloutsy/assets/js/actulus.selectbox.js"></script>
+
+
+	</body>
+</html>
+
+
+<script>
+const serviceQuery = new URLSearchParams(window.location.search);
+if (serviceQuery.get('service_id') !== null) {
+    const service_id = serviceQuery.get('service_id');
+    const services = window.modules.siteOrder.services;
+    
+    const cat_id = services[service_id].cid;
+
+    var event = document.createEvent('HTMLEvents');
+
+    setTimeout(() => {
+        console.log(cat_id);
+        $('.select-option[data-value="'+ cat_id +'"]').click();
+    }, 1000);
+
+    setTimeout(() => {
+        $('.select-option[data-value="'+ service_id +'"]').click();
+
+        event.initEvent('change', true, false);
+        serviceSelect.dispatchEvent(event);
+    }, 1500);
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script defer src="https://cdn.smmspot.net/cloutsy/assets/js/main.js"></script>
+<script defer src="https://cdn.smmspot.net/cloutsy/assets/js/howler.js"></script>
+<script defer src="../music/music.js"></script>

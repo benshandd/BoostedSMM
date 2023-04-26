@@ -1,0 +1,205 @@
+{% include 'header.twig' %}
+
+
+
+<div class="app-content">
+    <div id="PageTitle">Ticket Detail</div>
+    <div class="container-fluid">
+        <section class="sd-head">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <a href="/tickets" class="sd-back">
+                        <i class="ri-arrow-left-line me-3"></i>
+                        <span class="text">Go Back</span>
+                    </a>
+                </div>
+                
+   
+                  {% if error %}
+        <div class="alert alert-dismissible alert-danger">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          {{ errorText }}
+        </div>
+      {% endif %}
+      {% if success %}
+        <div class="alert alert-dismissible alert-success">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          {{ successText }}
+        </div>
+      {% endif %}
+      
+      
+                 {% if messageList["ticket"]["canmessage"] == 1 %} <span class="badge"> This request has been closed by the administrator</span></div> {% endif %}
+                  
+                <div class="col-md-auto col-12 ms-auto">
+                    <div class="sd-tid">
+                        <h2 class="title">{{ messageList['ticket']['subject'] }}</h2>
+                        <div class="tid">
+                          #{{ messageList['ticket']['ticket_id'] }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sd-ticket">
+            <div class="row">
+                <div class="col-xxl-4 col-lg-5 col-md-6 mb-4 order-2 order-md-1 mt-4 mt-md-0">
+                    <div class="card card-border mb-3">
+                        <div class="card-body sd-cb">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="tc-ti-title">Subject</h3>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="tc-ti-text p-color">{{ messageList['ticket']['subject'] }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-border mb-3">
+                        <div class="card-body sd-cb">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="tc-ti-title">Priority</h3>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="tc-ti-text i-color">Normal</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-border mb-3">
+                        <div class="card-body sd-cb">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="tc-ti-title">Avg. Response Time</h3>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="tc-ti-text p-color">0-4 Hours</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-border mb-3">
+                        <div class="card-body sd-cb">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="tc-ti-title">Department</h3>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="tc-ti-text s-color">Customer Support</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-border tc-ti-box">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="d-icon i-info me-3">
+                                    <i class="ri-vip-crown-2-line"></i>
+                                </div>
+                                <span class="fw-600 i-color">Reliable Support</span>
+                            </div>
+                            <h2 class="title">Here to help you 24/7</h2>
+                            <div class="text">
+                                <p>Our team averages a response time of 0-15 minutes. LIVE Chat will respond within 2
+                                    minutes. All 24 hours per day 7 days a week.</p>
+                                <p>Admins will respond within every 2 hours. We are here to work for you and your
+                                    orders. Please let us know if you have any questions at all.</p>
+                            </div>
+                            <div class="cloutsy-mark">Cloutsy Team</div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                
+                 
+               
+                
+                <div class="col-xxl-8 col-lg-7 col-md-6 order-1 order-md-2">
+                    <div class="card card-border">
+                        <div class="card-body">
+                            <div class="schat-body">
+                                <div class="schat-chat-body">
+                                    <div class="schat-body-content">
+                                        
+                                        
+                                        
+                                        
+                                        {% if messageList %}
+                {% for message in messageList %}
+                  {% if message["support"] == 1 %}
+                                        
+                                        
+                                          
+                                            <div class="ticket-message-block ticket-message-right">
+                                            <div class="ticket-msg-container">
+                                                <div class="ticket-msg">{{ message["message"] }}</div>
+                                                <div class="date-time">{{ user["username"] }} {{ message["time"] }}</div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+  {% elseif message["subject"] %}
+                  {% else %}
+            
+                                        
+
+                                    </div>
+                                </div>  
+                                
+                         
+                                {#<div class=" ticket-dialog__row  ticket-dialog__row-user ">#}
+                                <div class="ticket-message-block ticket-message-left">
+                                <div class="ticket-msg-container">
+                                             <div class="ticket-msg">{{ message["message"] }}</div>
+                                            <div class="ticket-dialog__row-bottom">
+                                                <div class="ticket-dialog__row-bottom-name">Support</div>
+                                                <div class="ticket-dialog__row-bottom-date">{{ message["time"] }}</div>
+                                            </div>
+                                        </div>
+                                                                    </div>
+                            
+                      </div>
+                    </div>
+                  {% endif %}
+
+                {% endfor %}
+              {% endif %}
+                                
+               
+                                     {% if messageList['ticket']['canmessage'] == 2 %}
+                                      
+                              <form method="post" action="tickets/{{ messageList['ticket']['ticket_id'] }}">
+                      <div class="form-group panel-border-top"><br>
+                        <label for="message" class="control-label">Message</label>
+                        <textarea id="message" rows="5" class="form-control" name="message">{{ data["message"] }}</textarea>
+                      </div>
+                      <button type="submit" class="btn btn-info btn-sm sd-send-btn me-2">Submit</button>
+                    </form>
+                                                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    
+    
+    
+     {% endif %}
+    
+   
+    
+</div><!-- app-content -->
+
+
+
+
+{% include 'footer.twig' %}

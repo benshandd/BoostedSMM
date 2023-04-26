@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <base href="{{ site['url'] }}">
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if pagetitle %}{{ pagetitle }}{% else %}{% if blogtitle %}{{ blogtitle }}{% else %}{{ title }}{% endif %}{% endif %}</title>
+
+  <meta name="keywords" content="{% if pagekeywords %} {{ pagekeywords }} {% else %} {{ site["keywords"]}}  {% endif %}">
+  <meta name="description" content="{% if pagedescription %} {{ pagedescription }} {% else %} {{ site['description'] }}  {% endif %}">
+  {% if site['favicon'] %}
+    <link rel="shortcut icon" type="image/ico" href="{{ site['favicon'] }}" />
+  {% endif %}
+		  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "f6872f63-cb77-4240-a74b-0b7f6c5ec6e5",
+      safari_web_id: "web.onesignal.auto.0654afc0-ce06-4b31-9757-37165e976417",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+OneSignal.push(function() {
+  OneSignal.showSlidedownPrompt();
+});
+</script>
+
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "f6872f63-cb77-4240-a74b-0b7f6c5ec6e5",
+      safari_web_id: "web.onesignal.auto.0654afc0-ce06-4b31-9757-37165e976417",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+OneSignal.push(function() {
+  OneSignal.showSlidedownPrompt();
+});
+</script>
+
+<script>
+        (function(w,d,s,r,n){w.TrustpilotObject=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
+            a=d.createElement(s);a.async=1;a.src=r;a.type='text/java'+s;f=d.getElementsByTagName(s)[0];
+            f.parentNode.insertBefore(a,f)})(window,document,'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
+            tp('register', 'm40ItwiIqlrTL7Ii');
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FGHZ53BH9W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FGHZ53BH9W');
+</script>
+
+<script> 
+	document.addEventListener('DOMContentLoaded', function() {
+		const trustpilot_invitation = {
+   			recipientEmail: 'john@gmail.com',
+   			recipientName: 'John',
+   			referenceId: 'Order_123',
+   			source: 'InvitationScript',
+  		};
+  		tp('createInvitation', trustpilot_invitation);
+	});
+</script>
+		
+  			<link rel="stylesheet" type="text/css" href="../script/cdn.mypanel.link/fsvxaw/op5g4nbqmp8nzepb.css">
+					<link rel="stylesheet" type="text/css" href="../script/cdn.mypanel.link/fsvxaw/33j3i14zsylh56wz.css">
+					<link rel="stylesheet" type="text/css" href="../script/cdn.mypanel.link/libs/bootstrap-datetimepicker/4.17.47/bootstrap-datetimepicker.min.css">
+					<link rel="stylesheet" type="text/css" href="../script/cdn.mypanel.link/css/font-awesome/css/all.min.css">
+					<link rel="stylesheet" type="text/css" href="../script/cdn.mypanel.link/global/c3gyq3shygmabbke.css">
+		</head>
+
+<body>
+  		
+    <div class="dashboard-root">
+        <button class="sidebar-toggle" id="sidebar-toggle" onclick="dashboardMenuToggle()">
+            <i class="ri-menu-line menu-bar"></i>
+            <i class="ri-close-line close-i"></i>
+        </button>
+        <div id="sidebar" class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-logo">
+                    <a href="/" class="logo-link">
+                        <img src="{{ site['logo'] }}" alt="{{ site['logo'] }}">
+                    </a>
+                </div>
+                <div class="sidebar-body">
+                    <div class="sidebar-wrapper">
+                         <div class="sidebar-player">
+                            <div class="player-content">
+                                <div class="album-cover">
+                                    <img id="albumCover" src="">
+                                </div>
+                                <div class="player-right">
+                                    <h2 class="song-name">Song Name</h2>
+                                    <div class="control-wrapper">
+                                        <button class="control-btn" id="song-prev">
+                                            <i class="ri-skip-back-line"></i>
+                                        </button>
+                                        <button class="control-btn" id="play-pause">
+                                            <i class="ri-play-line i-play"></i>
+                                            <i class="ri-pause-line i-pause"></i>
+                                        </button>
+                                        <button class="control-btn" id="song-next">
+                                            <i class="ri-skip-forward-line"></i>
+                                        </button>
+                                        <div class="a-of-total">
+                                            <span id="current-song-order">1</span> of
+                                            <span id="total-song"></span>
+                                        </div>
+                                        <button class="control-btn ms-auto" id="sound-autoplay" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" title=""
+                                            data-bs-original-title="Autoplay when site open">
+                                            <i class="ri-checkbox-blank-line i-off"></i>
+                                            <i class="ri-checkbox-line i-on"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- ./sidebar-player -->
+                        <div class="sidebar-balance">
+                            <div class="icon">
+                                <i class="ri-vip-crown-2-line"></i>
+                            </div>
+                            <div class="content">
+                                <p class="s-balance">{{ currency["symbol"] }}{{ (user['balance']*currency["value" ]) }}</p>
+                                <a href="/addfunds" class="s-fill-balance">
+                                    <span>Fill Balance</span>
+                                    <i class="ri-arrow-right-line ms-1"></i>
+                                </a>
+                            </div>
+                        </div><!-- balance -->
+                        <div class="sidebar-menu-wrapper">
+                            <ul class="sidebar-menu">
+                                                                <li  class="s-menu-item active" >
+                                    <a href="/" class="s-menu-link" >
+                                                                                <div class="icon">
+                                            <i class="far fa-box-heart"></i>
+                                        </div>
+                                                                                <div class="text">
+                                                                                      New Order
+                                                                                  </div>
+                                    </a>
+                                </li>
+                                                            <li  class="s-menu-item" >
+                                    <a href="/services" class="s-menu-link" >
+                                                                                <div class="icon">
+                                             <i class="ri-list-check-2"></i>
+                                        </div>
+                                                                                <div class="text">
+                                            
+                                            Services
+                                                                                  </div>
+                                    </a>
+                                </li>
+                                                            <li  class="s-menu-item" >
+                                    <a href="/orders" class="s-menu-link" >
+                                                                                <div class="icon">
+                                             <i class="ri-shopping-basket-line"></i>
+                                        </div>
+                                                                                <div class="text">
+                                            
+                                            Orders
+                                                                                  </div>
+                                    </a>
+                                </li>
+                                                            <li  class="s-menu-item" >
+                                    <a href="/massorder" class="s-menu-link" >
+                                                                                <div class="icon">
+                                            <i class="far fa-inbox-out"></i>
+                                        </div>
+                                                                                <div class="text">
+                                            
+                                            Mass order
+                                                                                  </div>
+                                    </a>
+                                </li>
+                                                            <li  class="s-menu-item" >
+                                    <a href="/addfunds" class="s-menu-link" >
+                                                                                <div class="icon">
+                                            <i class="ri-exchange-dollar-line"></i>
+                                        </div>
+                                                                                <div class="text">
+                                            
+                                            Add funds
+                                                                                  </div>
+                                    </a>
+                                </li>
+                                                            <li  class="s-menu-item" >
+                                    <a href="/refer" class="s-menu-link" >
+                                                                                <div class="icon">
+                                            <i class="ri-star-smile-line"></i>
+                                        </div>
+                                                                                <div class="text">
+                                            
+                                            Affiliates
+                                                                                  </div>
+                                    </a>
+                                </li>
+                                                            <li  class="s-menu-item" >
+                                    <a href="/child-panels" class="s-menu-link" >
+                                                                                <div class="icon">
+                                            <i class="ri-store-2-line"></i>
+                                        </div>
+                                                                                <div class="text">
+                                            
+                                            Resell Services
+                                                                                  </div>
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                                            <li  class="s-menu-item" >
+                                    <a href="/terms" class="s-menu-link" >
+                                                                                <div class="icon">
+                                           <i class="ri-store-2-line"></i>
+                                        </div>
+                                                                                <div class="text">
+                                            
+                                            Terms
+                                                                                  </div>
+                                    </a>
+                                </li>
+                                                            <li  class="s-menu-item" >
+                                    <a href="/api" class="s-menu-link" >
+                                                                                <div class="icon">
+                                            <i class="ri-terminal-box-line"></i>
+                                        </div>
+                                                                                <div class="text">
+                                            
+                                            API
+                                                                                  </div>
+                                    </a>
+                                </li>
+                                                            <li  class="s-menu-item" >
+                                    <a href="/tickets" class="s-menu-link" >
+                                                                                <div class="icon">
+                                            <i class="ri-customer-service-2-line"></i>
+                                        </div>
+                                                                                <div class="text">
+                                            
+                                           Suppport
+                                                                                  </div>
+                                    </a>
+                                </li>
+                                                            <li  class="s-menu-item" >
+                                    <a href="/updates" class="s-menu-link" >
+                                                                                <div class="icon">
+                                            <i class="ri-notification-line"></i>
+                                        </div>
+                                                                                <div class="text">
+                                            
+                                            Updates
+                                                                                  </div>
+                                    </a>
+                                </li>
+                             <li  class="s-menu-item" >
+                                    <a href="/blog" class="s-menu-link" >
+                                                                                <div class="icon">
+                                            <i class="ri-book-fill"></i>
+                                        </div>
+                                                                                <div class="text">
+                                            
+                                            Blog
+                                                                                  </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!-- ./sidebar-menu-wrapper -->
+                        <div class="sidebar-signout-wrapper">
+                            <a href="/logout"
+                                class="btn btn-secondary btn-border btn-block d-flex align-items-center justify-content-center">
+                                <i class="ri-shut-down-line me-3"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div><!-- sidebar-wrapper -->
+                </div><!-- ./sidebar-body  -->
+            </div>
+        </div><!-- ./sidebar -->
+        <div id="header" class="d-header">
+            <div class="container-fluid">
+                <div class="row align-items-center head-row">
+                    <div class="col-auto d-none d-md-block d-xxl-none col-item">
+                        <div style="width: 56px;"></div>
+                    </div>
+                    <div class="col col-page-title col-item">
+                        <h1 class="page-title" id="pageTitleHeader">{{ site["site_name"] }}</h1>
+                    </div>
+                    <div class="col-auto col-item d-flex">
+                        <div class="dropdown d-dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="changeCurrencyDd"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="icon c-1">
+                                    <i class="ri-currency-line"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="title">
+                                        <span>Currency</span>
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </div>
+                                    <div class="info">
+                                        Change Currency
+                                    </div>
+                                </div>
+                            </button>
+                           <ul class="dropdown-menu" aria-labelledby="changeCurrencyDd" id="currencies-list">
+												{% for curr in currencies %} <li class="nav-item component-navbar-nav-item component-navbar-private-nav-item"> <a class="component-navbar-nav-link  component-navbar-nav-link__navbar-private component-navbar-nav-link-active__navbar-private " href="/account/currency_preferred/{{ curr["id"]}}"> {{ curr["name"]}}</a></li>    {% endfor %}
+												                        </ul>
+                        </div><!-- ./dropdown Currency -->
+                    </div><!-- col-item -->
+                    <!--
+                    <div class="col-auto col-item">
+                        <div class="d-dropdown">
+                            <a class="btn" type="button" id="changeCurrencyDd">
+                                <div class="icon c-2">
+                                    <i class="ri-notification-3-line"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="title">
+                                        <span>Updates</span>
+                                    </div>
+                                    <div class="info">
+                                        See Service Updates
+                                    </div>
+                                </div>
+                            </a>
+                        </div> 
+                    </div> col-item -->
+                    <div class="col-auto col-item">
+                        <div class="d-dropdown">
+                          <a href="/account">  
+                          <button class="btn" type="button" id="changeCurrencyDd">
+                                <div class="icon user-avatar">
+                                    <img src="https://cdn.smmspot.net/cloutsy/assets/img/avatar.png" alt="User Avatar">
+                                </div>
+                                <div class="content">
+                                    <div class="title">
+                                        <span>@ {{ user["username"] }} </span>
+                                        <i class="ri-checkbox-circle-line p-color"></i>
+                                    </div>
+                                    <div class="info d-flex align-items-center">
+                                        See Dashboard
+                                        <i class="ri-arrow-right-line ms-2"></i>
+                                    </div>
+                                </div>
+                            </button>
+                          </a>
+                        </div><!-- ./Updates -->
+                    </div><!-- col-item -->
+                </div>
+            </div>
+        </div><!-- ./d-header -->

@@ -1,0 +1,740 @@
+{% include 'header2.twig' %}
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MN8XC9GKQE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MN8XC9GKQE');
+  gtag('config', 'AW-11017143463');
+</script>
+<div class="app-content">
+    <section class="home-head">
+        <div class="hh-bg">
+            <img src="https://cdn.mypanel.link/fsvxaw/1im3m0u2ontk2uy3.png" alt="bg">
+        </div>
+        <div class="container">
+            <div class="home-head-content">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="hh-box-title ">
+                            <i class="ri-percent-line icon"></i>
+                            <span class="text">Your All-In-One Stop for Social Media Marketing</span>
+                        </div><!-- ./hh-box-title -->
+                        <h1 class="hh-title">
+                            Boost and Promote Your Content
+                            with <span>{{ site["site_name"]  }}!</span>
+                        </h1>
+                        <p class="hh-text">
+
+                            </br> Facebook, Instagram, SnapChat, OnlyFans, you name it! We've got over 1,000 services to
+                            help boost and promote your content on mutiple different Social Media Platforms! Sign up and
+                            Get Started Today!
+                            </br> </br></br> </br> </br> </br>
+
+                        </p>
+                        <div class="row">
+                            <div class="col-md-auto">
+                                <a href="/services" class="btn btn-primary btn-border btn-block">
+                                    <span>See All Services</span>
+                                    <i class="ri-arrow-right-line ms-2"></i>
+                                </a>
+                            </div>
+                            <div class="col-md-auto mt-3 mt-md-0">
+                                <a href="/signup" class="btn btn-block">
+                                    <span>Register Now</span>
+                                    <i class="ri-user-add-line ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!-- ./col(start) -->
+                    <div class="col-lg-5 d-none d-lg-block">
+                        <div class="hh-img-cover">
+                            {#<img src="../script/mobile.png" alt="Phone">#}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- home-head -->
+    <section class="home-login">
+        <div class="container">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-6">
+                    <div class="hl-title">
+                        <div class="icon">
+                            <i class="ri-user-shared-2-line"></i>
+                        </div>
+                        <div class="text">Login to <span class="p-color">{{ site["site_name"]  }}</span> now!</div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-start text-md-end mt-3 mt-md-0">
+                    <span class="dhacc">
+                        Don't have an account? <a href="/signup">Register Now</a>
+                    </span>
+                </div>
+            </div><!-- row -->
+            <div class="card card-border">
+                <div class="p-4">
+
+
+
+                    {% if errorText %}
+                    <div class="alert alert-dismissible alert-danger">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        {{ errorText }}
+                    </div>
+                    {% endif %}
+                    {% if successText %}
+                    <div class="alert alert-dismissible alert-success">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        {{ successText }}
+                    </div>
+                    {% endif %}
+
+
+
+
+                    <form method="POST" action="">
+                        <div class="row">
+
+                            <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+                                <div class="home-input">
+                                    <div class="icon">
+                                        <i class="ri-user-line"></i>
+                                    </div>
+                                    <input type="text" name="username" class="form-control" value="{{ data["username"] }}" placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+                                <div class="home-input">
+                                    <div class="icon">
+                                        <i class="ri-lock-password-line"></i>
+                                    </div>
+                                    <input type="password" name="password" class="form-control"placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="hl-btn-wrapper">
+                                    <input type="checkbox" name="LoginForm[remember]" value="1" id="loginRemember">
+                                    <label class="btn hl-btn" type="button" for="loginRemember" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Remember Me">
+                                    <i class="ri-bookmark-3-line"></i>
+                                </label>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <a href="/resetpassword" class="btn hl-btn" type="button" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Forgot Password">
+                                    <i class="ri-lock-unlock-line"></i>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <input type="hidden" name="_csrf" value="4F5suWdxoWV4A7cG3lzgePAlC2lZO9laQQbsjzqmcWWBOzPpBh3JFzVCw3-fN6gTn0BvLnRLqhcJdI3OV8cJMQ==">
+
+                                <button type="submit" class="btn btn-primary btn-block lg-btn">
+                                Login to&nbsp; {{ site["site_name"]  }}
+                            </button>
+                            </div>
+                        </div><!-- ./row -->
+                    </form>
+                </div><!-- ./login-body -->
+            </div><!-- ./login-card -->
+        </div>
+    </section>
+    <section class="home-platforms">
+        <div class="container">
+            <div class="hpla-wrapper">
+                <img src="https://cdn.smmspot.net/cloutsy/assets/img/platforms/ig.svg" alt="ig" class="hpla-item">
+                <img src="https://cdn.smmspot.net/cloutsy/assets/img/platforms/sp.svg" alt="ig" class="hpla-item">
+                <img src="https://cdn.smmspot.net/cloutsy/assets/img/platforms/tw.svg" alt="ig" class="hpla-item">
+                <img src="https://cdn.smmspot.net/cloutsy/assets/img/platforms/yt.svg" alt="ig" class="hpla-item">
+                <img src="https://cdn.smmspot.net/cloutsy/assets/img/platforms/ch.svg" alt="ig" class="hpla-item">
+            </div>
+        </div>
+    </section>
+
+    <section class="home-diff-sec">
+        <div class="container">
+            <div class="home-title text-center mb-4">
+                <div class="htbox">
+                    <i class="ri-star-smile-line"></i>
+                </div>
+                <h2 class="title">
+                    What Makes&nbsp; {{ site["site_name"] }} <span>Different?</span>
+                </h2>
+            </div><!-- home-title -->
+            <div class="text-center">
+                <div class="home-text mb-4">
+                    That's easy. Never wait on support again. Never have issues with stability, service and
+                    refunds. {{ site["site_name"] }} is made to only give you what you pay form which is High Quality
+                    SMM
+                    Services.
+                </div>
+            </div>
+            <div class="row row-cols-lg-4 row-cols-md-2 row-cols-2 pt-4 diff-row">
+                <div class="col">
+                    <div class="diff-card" data-aos="fade-up">
+                        <div class="diff-card--icon icon-1">
+                            <i class="ri-cup-line"></i>
+                        </div>
+                        <h3 class="diff-card--title">Great Service Quality</h3>
+                        <div class="diff-card--text">Our Great Service Quality sets us apart from the competition. It's
+                            guaranteed that the quality of our SMM services will pleasantly surprise
+                            you.</div>
+                    </div>
+                </div><!-- ./col -->
+                <div class="col">
+                    <div class="diff-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="diff-card--icon icon-2">
+                            <i class="ri-shield-line"></i>
+                        </div>
+                        <h3 class="diff-card--title">Multiple Methods</h3>
+                        <div class="diff-card--text">From major credit cards to popular e-wallets, our platform accepts
+                            a wide range of payment methods. This eliminates any barriers and ensures secure
+                            transactions
+                        </div>
+                    </div>
+                </div><!-- ./col -->
+                <div class="col">
+                    <div class="diff-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="diff-card--icon icon-3">
+                            <i class="ri-price-tag-3-line"></i>
+                        </div>
+                        <h3 class="diff-card--title">Really Cheap Prices</h3>
+                        <div class="diff-card--text">We believe that everyone should have access to top-quality social
+                            media services, regardless of their budget.
+                        </div>
+                    </div>
+                </div><!-- ./col -->
+                <div class="col">
+                    <div class="diff-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="diff-card--icon icon-4">
+                            <i class="ri-timer-flash-line"></i>
+                        </div>
+                        <h3 class="diff-card--title">Extra Quick Delivery</h3>
+                        <div class="diff-card--text">At boostedsmm, we understand the importance of timely delivery when
+                            it comes to social media services.
+                        </div>
+                    </div>
+                </div><!-- ./col -->
+            </div><!-- ./row -->
+        </div><!-- container -->
+    </section><!-- home-diff-sec -->
+    <section class="home-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <div class="hcoc-card py-4 p-md-0 mb-4 mb-md-0" data-aos="fade-up">
+                        <div class="hcoc-body">
+                            <div class="hcoc-user-info">
+                                <div class="hcoc-avatar">
+                                    <img src="https://cdn.smmspot.net/cloutsy/assets/img/home/avatar-1.png" alt="User avatar">
+                                </div>
+                                <div class="hcoc-name">Jess Custer, Influencer</div>
+                            </div>
+                            <div class="hcoc-text" data-aos="fade-up">“I love&nbsp;{{ site["site_name"] }}, it's so easy
+                                to use and never lets me down.”
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 offset-md-1">
+                    <div class="home-title c-2 mb-5">
+                        <div class="row align-items-center mb-4 pb-3" data-aos="fade-up" data-aos-delay="0">
+                            <div class="col-auto">
+                                <div class="htbox mb-0">
+                                    <i class="ri-star-smile-line"></i>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="fw-bold s-color">Social Media Services</span>
+                            </div>
+                        </div>
+                        <h2 class="title" data-aos="fade-up" data-aos-delay="200">
+                            Rise on Social Media <br />
+                            <span>Permanently</span> with us.
+                        </h2>
+                    </div><!-- home-title -->
+                    <div class="home-text mb-5" style="max-width: 600px;" data-aos="fade-up" data-aos-delay="400">
+                        Our team of experts can help you build a strong online presence, engage with your target
+                        audience, and increase your brand visibility. Get ahead of your competition and achieve your
+                        social media goals with us.
+                    </div>
+                    <div class="row">
+                        <div class="col-auto" data-aos="fade-up" data-aos-delay="600">
+                            <a href="/services" class="btn btn-secondary btn-border">
+                                <span>See All Servcies</span>
+                                <i class="ri-arrow-right-line ms-2"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto" data-aos="fade-up" data-aos-delay="700">
+                            <a href="/signup" class="btn">
+                                <span>Register Now</span>
+                                <i class="ri-user-add-line ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="home-rise-section">
+        <div class="container">
+            <div class="hrs-card" data-aos="fade-up">
+                <div class="hrs-content">
+                    <div class="row align-items-center mb-5">
+                        <div class="col-md">
+                            <div class="home-title c-3">
+                                <h2 class="mb-0">
+                                    Four Steps to Rise on <span>Social Media</span>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-md-auto ms-auto">
+                            <a href="/signup" class="btn btn-info btn-border btn-block mt-3 mt-md-0">
+                                <span>Get Started</span>
+                                <i class="ri-arrow-right-line ms-2"></i>
+                            </a>
+                        </div>
+                    </div><!-- ./row (card head) -->
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+                            <div class="hrs-steps">
+                                <div class="item" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="number">
+                                        <div class="number-box">1</div>
+                                    </div>
+                                    <div class="content">
+                                        <h4>Create an account</h4>
+                                        <p>Begin with signing up and then log in to your account.</p>
+                                        </p>
+                                    </div>
+                                </div><!-- item -->
+                                <div class="item" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="number">
+                                        <div class="number-box">2</div>
+                                    </div>
+                                    <div class="content">
+                                        <h4>Add funds</h4>
+                                        <p>The next step is to choose a payment method and add funds.</p>
+                                    </div>
+                                </div><!-- item -->
+                                <div class="item" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="number">
+                                        <div class="number-box">3</div>
+                                    </div>
+                                    <div class="content">
+                                        <h4>Pick a service</h4>
+                                        <p>Pick the SMM services you want and easily place your orders.</p>
+                                    </div>
+                                </div><!-- item -->
+                                <div class="item" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="number">
+                                        <div class="number-box">4</div>
+                                    </div>
+                                    <div class="content">
+                                        <h4>Enjoy great results</h4>
+                                        <p>You will be informed once your order is complete, it won't take long.
+                                    </div>
+                                </div><!-- item -->
+                            </div><!-- ./hrs-steps -->
+                        </div><!-- ./col(left) -->
+                        <div class="col-lg-7 col-md-6">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="home-section">
+        <div class="container">
+            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1">
+                <div class="col">
+                    <div class="card card-border card-hobo card-1" data-aos="fade-up" data-aos-delay="0">
+                        <div class="card-body">
+                            <div class="c-head">
+                                <div>
+                                    <i class="ri-wallet-3-line icon"></i>
+                                </div>
+                                <div class="title">Budget Friendly</div>
+                            </div>
+                            <div class="c-text">
+                                Get the cheapest social media services on the market, starting from $0.04
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .item -->
+                <div class="col">
+                    <div class="card card-border card-hobo card-2" data-aos="fade-up" data-aos-delay="150">
+                        <div class="card-body">
+                            <div class="c-head">
+                                <div>
+                                    <i class="ri-flashlight-line icon"></i>
+                                </div>
+                                <div class="title">Effective Services</div>
+                            </div>
+                            <div class="c-text">
+                                Grow faster than you could imagine with us. All services 100% Guaranteed.
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .item -->
+                <div class="col">
+                    <div class="card card-border card-hobo card-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-body">
+                            <div class="c-head">
+                                <div>
+                                    <i class="ri-store-2-line icon"></i>
+                                </div>
+                                <div class="title">Become a Reseller</div>
+                            </div>
+                            <div class="c-text">
+                                Rent your own child panel, start your business and earn with us today!
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .item -->
+            </div>
+        </div>
+    </section>
+
+    <section class="home-section">
+        <div class="container">
+            <div class="our-ssto-box">
+                <div class="row align-items-center mb-5">
+                    <div class="col-md">
+                        <div class="home-title mb-0">
+                            <h2 class="mb-0">Our Success Stories</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-auto ms-auto mt-4 mt-md-0">
+                        <a href="/signup" class="btn btn-primary btn-border btn-block">
+                            <span>Get Started</span>
+                            <i class="ri-arrow-right-line ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="row row-cols-lg-2">
+                        <div class="col">
+                            <div class="testi-card">
+                                <div class="tc-top">
+                                    <div class="tc-avatar">
+                                        <img src="https://i.postimg.cc/cHzyKmdm/fwefef.png" alt="Avatar" class="tc-avatar-img">
+                                    </div>
+                                    <div class="tc-name">
+                                        Gary, Marketing
+                                    </div>
+                                    <div class="tc-stars">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="tc-content">
+                                    <p class="tc-text">
+                                        We've used various panels to resell services in the past, but&nbsp;{{
+                                        site["site_name"]}} is the only one that truly stands out. Their instant
+                                        responses and quick attention to inquiries are unparalleled. We are extremely
+                                        impressed with their level of customer service and will never consider using any
+                                        other provider.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- item -->
+                        <div class="col">
+                            <div class="testi-card">
+                                <div class="tc-top">
+                                    <div class="tc-avatar">
+                                        <img src="https://i.postimg.cc/cCKWTzF2/fefeda.png" alt="Avatar" class="tc-avatar-img">
+                                    </div>
+                                    <div class="tc-name">
+                                        Dennis, Influencer
+                                    </div>
+                                    <div class="tc-stars">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="tc-content">
+                                    <p class="tc-text">
+                                        It was a little confusing at first on how to place orders and manage them. But
+                                        after you get the hang of it, its amazing. I love it! Thanks!
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- item -->
+                        <div class="col">
+                            <div class="testi-card">
+                                <div class="tc-top">
+                                    <div class="tc-avatar">
+                                        <img src="https://i.postimg.cc/L8PXmJBw/woman.png" alt="Avatar" class="tc-avatar-img">
+                                    </div>
+                                    <div class="tc-name">
+                                        Ashley, Influencer
+                                    </div>
+                                    <div class="tc-stars">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="tc-content">
+                                    <p class="tc-text">
+                                        I manage multiple social media accounts for clients and&nbsp;{{
+                                        site["site_name"]}} has been a great help in boosting their numbers. It works
+                                        perfectly and I'm very satisfied with the results
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- item -->
+                        <div class="col">
+                            <div class="testi-card">
+                                <div class="tc-top">
+                                    <div class="tc-avatar">
+                                        <img src="https://i.postimg.cc/CKYFYmKn/man.png" alt="Avatar" class="tc-avatar-img">
+                                    </div>
+                                    <div class="tc-name">
+                                        Charles, Real Estate
+                                    </div>
+                                    <div class="tc-stars">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="tc-content">
+                                    <p class="tc-text">
+                                        I always use these guys to send social signals to my home listings. It not only
+                                        helps with SEO, but also ensures that my listings show up almost instantly on
+                                        Google. Their service is very cool and I'm impressed with the results it
+                                        delivers.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- item -->
+                    </div><!-- ./row -->
+                </div><!-- content -->
+                <div class="tci-card">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h3 class="tci-title">
+                                We Care About<br />
+                                Customer’s Satisfaction
+                            </h3>
+                            <a href="/signup" class="btn">
+                                <span>Sign Up today!</span>
+                                <i class="ri-arrow-right-line ms-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <img src="https://cdn.smmspot.net/cloutsy/assets/img/home/person1.png" class="tci-image" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="home-last">
+        <img src="https://cdn.smmspot.net/cloutsy/assets/img/home/last.svg" class="hlbg d-none" alt="">
+        <div class="container">
+            <div class="social-icons">
+                <div class="social-icon si-tw">
+                    <i class="ri-twitter-line"></i>
+                </div>
+                <div class="social-icon si-yt">
+                    <i class="ri-youtube-line"></i>
+                </div>
+                <div class="social-icon si-fb">
+                    <i class="ri-facebook-fill"></i>
+                </div>
+                <div class="social-icon si-ig">
+                    <i class="ri-instagram-line"></i>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="hbl-title">
+                        <div class="hblt-top">
+                            <div>
+                                <div class="htbox mb-0">
+                                    <i class="ri-star-smile-line"></i>
+                                </div>
+                            </div>
+                            <div class="text">
+                                Try Our Panel Today!
+                            </div>
+                        </div>
+                        <h2 class="title">
+                            Best Social Media Services
+                        </h2>
+                        <div class="home-text">
+                            Working with &nbsp;{{ site["site_name"] }} is like having a personal account manager to help
+                            assist and manage orders with ease. Try it yourself today and you'll love it!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div><!-- app-content -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+
+
+
+<style>
+    .whatsapp-container {
+        padding: 24px
+    }
+
+    .whatsapp-button {
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #738ADB;
+        color: #FFF !important;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none !important;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        transform: scale(0.9)
+    }
+
+    .whatsapp-button:hover {
+        transform: scale(1);
+        background-color: #6984e0
+    }
+</style>
+<div class="integration-fixed integration-fixed__bottom-right">
+    <div class="whatsapp-container">
+        <a href="https://discord.gg/kGT3kdkyRt" target="_blank" class="whatsapp-button">
+            <i class="fab fa-discord"></i>
+        </a>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="ft-content">
+                <div class="row align-items-center">
+                    <div class="col-md text-center text-md-start mb-4 mb-md-0">
+                        <a href="/">
+                            <img class="footer-logo" src="{{ site['logo'] }}" alt="Cloutsy">
+                        </a>
+                    </div>
+                    <div class="col-md text-md-end text-center">
+                        <ul class="footer-menu">
+                            <li class="menu-item">
+                                <a href="/" class="menu-link  active ">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/services" class="menu-link ">
+                                    Services
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/api" class="menu-link ">
+                                    API
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/blog" class="menu-link ">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/terms" class="menu-link ">
+                                    Terms
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="f-divider"></div>
+        </div>
+    </div><!-- ./footer-top -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                    <div class="footer-cp-text">
+                        <a href="/">{{ site["site_name"] }}</a> © 2022. All rights reserved.
+                    </div>
+                </div>
+                <div class="col-md-6  text-md-end text-center">
+                    <div class="footer-alert">
+                        Made with ❤️ by&nbsp;{{ site["site_name"] }} Team
+                    </div>
+                </div>
+            </div>
+            <div class="footer-l-alert mt-4">
+                We are in no way affiliated with any of the social media platforms mentioned on this website, we
+                are simply resellers of social media marketing services.
+            </div>
+        </div>
+    </div>
+</footer>
+</div><!-- .root -->
+
+<!-- bootstrap javascript bundle -->
+<script src="https://cdn.smmspot.net/cloutsy/assets/js/bootstrap.bundle.min.js"></script>
+<!-- swiper.js -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<!-- actulus selectbox -->
+<script src="https://cdn.smmspot.net/cloutsy/assets/js/actulus.selectbox.js"></script>
+<!-- sa -->
+<script type="text/javascript" src="https://cdn.mypanel.link/libs/jquery/1.12.4/jquery.min.js">
+</script>
+<script type="text/javascript" src="https://cdn.mypanel.link/global/aknio8ec1fpphc0p.js">
+</script>
+<script type="text/javascript" src="https://cdn.mypanel.link/global/nfos6j9mo1on7ksz.js">
+</script>
+<script type="text/javascript" src="https://cdn.mypanel.link/global/aep5leer2lblx6nz.js">
+</script>
+<script type="text/javascript" src="https://cdn.mypanel.link/global/6512pd498chdd7xk.js">
+</script>
+<script type="text/javascript" src="https://cdn.mypanel.link/fsvxaw/deemyq6wt6ekgyas.js">
+</script>
+<script type="text/javascript" src="https://cdn.mypanel.link/fsvxaw/xoupa5ojpygkpnk5.js">
+</script>
+<script type="text/javascript">
+    window.modules.layouts = {"theme_id":1,"auth":0,"live":true,"csrftoken":"4F5suWdxoWV4A7cG3lzgePAlC2lZO9laQQbsjzqmcWWBOzPpBh3JFzVCw3-fN6gTn0BvLnRLqhcJdI3OV8cJMQ=="};
+</script>
+<script type="text/javascript">
+    window.modules.signin = [];
+</script>
+<script type="text/javascript">
+</script>
+</body>
+
+</html>
+
+
+<script defer src="https://cdn.smmspot.net/cloutsy/assets/js/main.js"></script>

@@ -1,0 +1,276 @@
+{% include 'header.twig' %}
+
+
+
+
+
+<div class="app-content">
+    <div id="PageTitle">Account & Details</div>
+    <div class="container-fluid">
+        <section class="d-hello mb-4">
+            <div class="card d-hello-card card-border">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 mb-4 pb-2">
+                            <div class="d-hello--item pb-4">
+                                <div class="dh-right">
+                                    <div class="text-1">
+                                        Hello <span class="i-color pe-2">  {{ user["username"] }}!</span> Welcome to Our Panel
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+                     
+                     
+                     
+                     
+                     
+                     {% if error %}
+        <div class="alert alert-dismissible alert-danger">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          {{ errorText }}
+        </div>
+      {% endif %}
+      {% if success %}
+        <div class="alert alert-dismissible alert-success">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          {{ successText }}
+        </div>
+      {% endif %}
+                        <div class="col-lg">
+                            <div class="row row-cols-xl-3 row-cols-lg-3 row-cols-md-2 align-items-center">
+                                <div class="col">
+                                    <div class="d-hello--item">
+                                        <div class="icon-wrapper">
+                                            <div class="dh-icon icon-primary">
+                                                <i class="ri-vip-crown-2-line"></i>
+                                            </div>
+                                        </div>
+                                        <div class="dh-right">
+                                            <div class="text-3">
+                                                Account Status
+                                            </div>
+                                            <div class="text-2">
+                                                Newbie
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- ./col -->
+                                <div class="col">
+                                    <div class="d-hello--item">
+                                        <div class="icon-wrapper">
+                                            <div class="dh-icon icon-secondary">
+                                                <i class="ri-vip-crown-2-line"></i>
+                                            </div>
+                                        </div>
+                                        <div class="dh-right">
+                                            <div class="text-3">
+                                                Balance
+                                            </div>
+                                            <div class="text-2">
+                                                {{ currency["symbol"] }}{{ (user['balance']*currency["value" ]) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- ./col -->
+                                <div class="col">
+                                    <div class="d-hello--item">
+                                        <div class="icon-wrapper">
+                                            <div class="dh-icon icon-info">
+                                                <i class="ri-vip-crown-2-line"></i>
+                                            </div>
+                                        </div>
+                                        <div class="dh-right">
+                                            <div class="text-3">
+                                                Spending
+                                            </div>
+                                            <div class="text-2">
+                                                {{ currency["symbol"]  }} {{ (user["spent"]*currency["value"]) |round(7, 'floor') }} 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- ./col -->
+                            </div><!-- ./row () -->
+                        </div><!-- ./col (right) -->
+                    </div>
+                </div>
+            </div>
+        </section><!-- ./d-hello -->
+                 <section>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card card-border mb-4">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md">
+                                    <div class="acc-user">
+                                        <div class="acc-avatar">
+                                            <img src="https://cdn.smmspot.net/cloutsy/assets/img/avatar.png" class="usr-avatar-img" alt="Avatar">
+                                        </div>
+                                        <div>
+                                            <div class="acc-username">  {{ user["username"] }} </div>
+                                            <div class="acc-mail">{{ user['email'] }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-auto mt-3 mt-md-0">
+                                    <button id="gender-switch" class="acc-switch">
+                                        <div class="acc-switch-bg"></div>
+                                        <div class="btn-gender">
+                                            <i class="ri-men-line"></i>
+                                        </div>
+                                        <div class="btn-gender">
+                                            <i class="ri-women-line"></i>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div><!-- ./card-body -->
+                    </div><!-- ./card-->
+                </div><!-- ./col(left) -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card card-border acc-card-left">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md">
+                                    <div class="dh-icon icon-info">
+                                        <i class="ri-global-line"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-auto ms-auto acc-card-left mt-4 mt-md-0">
+                                    <div class="acc-api">
+                                        <div class="acc-api-key">
+                                                    
+                                          Generate New API Key
+            
+                                            
+                                        </div>
+  <form action="/account/newapikey" method="post">
+                                             <input type="hidden" name="_csrf" value="WcTHAGHCuQUKh6WRZ_KxNhWwYRIZjilB7qbTimoKuDcOlYZGE4HuX2v-8LxRuN90Qt4yV1TianSZzJb8CEj2Vg==">
+
+              <button type="submit" class="ms-3">  <i class="ri-refresh-line"></i></button>
+
+
+
+        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card card-border mb-4">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <div class="dh-icon icon-info">
+                                        <i class="ri-lock-2-line"></i>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h3 class="card-title">Change Password</h3>
+                                    <p class="card-head-text">Change your password from here.</p>
+                                </div>
+                            </div>
+                        </div><!-- ./card-header -->
+                        <div class="card-body">
+                            <form action="" method="POST">
+                                  <div class="mb-4">
+                                    <label for="mb-2" class="form-label">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-icon i-secondary me-2">
+                                                <i class="ri-vip-crown-2-line"></i>
+                                            </div>
+                                            <span class="s-color fw-600">Current Password</span>
+                                        </div>
+                                    </label>
+ <input type="password" class="form-control" value="" name="current_password">
+ 
+ 
+                                </div><!-- ./ form-group -->
+                                <div class="row row-cols-md-2 row-cols-1">
+                                    <div class="col mb-4">
+                                        <label for="mb-2" class="form-label">
+                                            <div class="d-flex align-items-center">
+                                                <div class="d-icon i-primary me-2">
+                                                    <i class="ri-vip-crown-2-line"></i>
+                                                </div>
+                                                <span class="p-color fw-600">New Password</span>
+                                            </div>
+                                        </label>
+                                       <input type="password" class="form-control" value="" name="password">
+                                       
+                                       
+                                    </div><!-- ./ form-group -->
+                                    <div class="col mb-4">
+                                        <label for="mb-2" class="form-label">
+                                            <div class="d-flex align-items-center">
+                                                <div class="d-icon i-warning me-2">
+                                                    <i class="ri-vip-crown-2-line"></i>
+                                                </div>
+                                                <span class="w-color fw-600">Confirm Password</span>
+                                            </div>
+                                        </label>
+                                        <input type="password" class="form-control" value="" name="confirm_password">
+                                    </div><!-- ./ form-group -->
+                                </div>
+                                        <input type="hidden" name="_csrf" value="6-_aUBYXqOEiiHTRlungtiTklyzC2KJJgslrbowUBCWKioUAd3vAk2_JAKjXgqjdS4Hza--o0QTKuwov4XV8cQ==">
+
+                                <button type="submit" class="btn btn-primary btn-border btn-block">
+                                    Change Password
+                                </button>
+                            </form>
+                        </div>
+                    </div><!-- ./card -->
+                </div><!-- ./col (left) -->
+                <div class="col-lg-6">
+                    <div class="card card-border mb-4">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <div class="dh-icon icon-secondary">
+                                        <i class="ri-tools-line"></i>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h3 class="card-title">Other Settings</h3>
+                                    <p class="card-head-text">Change your other Settings from here</p>
+                                </div>
+                            </div>
+                        </div><!-- ./card-header -->
+                        <div class="card-body">
+                            <form method="post" action="account/change_lang">
+
+            <div class="form-group">
+              <label for="charge" class="control-label">{{ lang['account.changelang.title'] }}</label>
+              <select class="form-control" name="lang">
+                  {% for language in site['languages'] %}
+                  <option {% if language["code"] == user["lang"] %} selected {% endif %} value="{{ language["code"] }}">{{ language["name"] }}</option>
+                  {% endfor %}
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-border btn-block">{{ lang['account.changelang.button'] }}</button>
+          </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!-- ./card -->
+                </div><!-- ./col (right) -->
+            </div>
+        </section>
+    </div>
+</div><!-- app-content -->
+
+
+
+
+
+{% include 'footer.twig' %}

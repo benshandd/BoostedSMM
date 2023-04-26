@@ -1,0 +1,345 @@
+{% include 'header.twig' %}
+
+
+<style>
+  .hidden, [hidden] {
+	display: none;
+}
+  </style>
+{#<div class="nwo-video">#}
+{#  <div class="nwo-video-container">#}
+{#    <div class="nwo-video-wrapper">#}
+{#      <iframe src="https://player.vimeo.com/video/683352840?h=b9e8d7a894?title=0&portrait=0&byline=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>#}
+{#      <button class="nwo-video-close" type="button">Close Video</button>#}
+{#    </div>#}
+{#  </div>#}
+{#</div>#}
+<div class="app-content">
+    <div id="PageTitle">New Order</div>
+    <div class="container-fluid">
+      <section class="dashboard-head-wrapper">
+            <div class="dashboard-head card-border">
+              	<img src="https://cdn.mypanel.link/fsvxaw/pkemxikt27iwdbje.png" 
+                     class="mascot-img" />
+                <div class="dhead-body">
+                    <h2 class="title">
+                        Welcome to&nbsp;{{ site["site_name"] }}!
+                    </h2>
+                    <p class="text">
+                       Let's work together to create a strong online presence and reach your target audience effectively. Your success is our top priority, so why not place an order and see how we can elevate your presence online?
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="d-hello">
+            <div class="card d-hello-card card-border">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 mb-4 pb-2">
+                            <div class="d-hello--item">
+                                <div class="dh-right">
+                                    <div class="text-1">
+                                        Hello <span class="i-color pe-2"> {{ user["username"]}} !</span> Welcome to&nbsp;{{ site["site_name"] }}!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="row row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 align-items-center">
+                                <div class="col">
+                                    <div class="d-hello--item">
+                                        <div class="icon-wrapper">
+                                            <div class="dh-icon icon-primary">
+                                                <i class="ri-vip-crown-2-line"></i>
+                                            </div>
+                                        </div>
+                                        <div class="dh-right">
+                                            <div class="text-3">
+                                                Account Status
+                                            </div> 
+                                          <div class="text-2">
+                                                Active
+                                            </div>
+                                            <div class="text-2" id="accStats"></div>
+                                        </div>
+                                    </div>
+                                </div><!-- ./col -->
+                                <div class="col">
+                                    <div class="d-hello--item">
+                                        <div class="icon-wrapper">
+                                            <div class="dh-icon icon-secondary">
+                                                <i class="ri-vip-crown-2-line"></i>
+                                            </div>
+                                        </div>
+                                        <div class="dh-right">
+                                            <div class="text-3">
+                                                Total Orders
+                                            </div>
+                                            <div class="text-2 oq_text">
+                                               {{ AllOrders}} 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- ./col -->
+                                <div class="col">
+                                    <div class="d-hello--item">
+                                        <div class="icon-wrapper">
+                                            <div class="dh-icon icon-warning">
+                                                <i class="ri-vip-crown-2-line"></i>
+                                            </div>
+                                        </div>
+                                        <div class="dh-right">
+                                            <div class="text-3">
+                                                Balance
+                                            </div>
+                                            <div class="text-2">
+                                                {{ currency["symbol"] }}{{ (user['balance']*currency["value" ]) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- ./col -->
+                                <div class="col">
+                                    <div class="d-hello--item">
+                                        <div class="icon-wrapper">
+                                            <div class="dh-icon icon-info">
+                                                <i class="ri-vip-crown-2-line"></i>
+                                            </div>
+                                        </div>
+                                        <div class="dh-right">
+                                            <div class="text-3">
+                                                Total Spent
+                                            </div>
+                                            <div class="text-2">
+                                            {{ currency["symbol"]  }} {{ (user["spent"]*currency["value"]) |round(7, 'floor') }} 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- ./col -->
+                            </div><!-- ./row () -->
+                        </div><!-- ./col (right) -->
+                    </div>
+                </div>
+            </div>
+        </section><!-- ./d-hello -->
+        <section class="neworder-main pt-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-border mt-5 mt-md-0 mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="d-icon i-primary me-3">
+                                    <i class="ri-vip-crown-2-line"></i>
+                                </div>
+                                <span class="fw-600">New order</span>
+                            </div>
+                        </div><!-- ./card (title)  -->
+                    </div>
+            
+                    <div class="card card-border">
+                        <div class="card-body">
+                          <div id="noc-wrapper" class="mb-4">
+                        
+                        
+                        
+                      </div>
+
+
+
+  {% if error %}
+      <div class="flex justify-between p-2 mb-4 text-sm font-medium text-gray-200 bg-red-600 rounded alert alert-dismissible alert-danger">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            {{ errorText }}
+          </div>
+    {% endif %}
+
+    {% if data["order"]["success"] == 1 %}
+      <div class="alert alert-dismissible alert-success">
+          
+         
+          
+          <strong> {{ lang["neworder.success.id"] }}: </strong> {{ data['order']['id'] }} <br>
+          <strong> {{ lang["neworder.success.service"] }}: </strong> {{ data['order']['service'] }} <br>
+          <strong> {{ lang["neworder.success.link"] }}: </strong> {{ data['order']['link'] }} <br>
+          <strong> {{ lang["neworder.success.quantity"] }}: </strong> {{ data['order']['quantity'] }} <br>
+          <strong> {{ lang["neworder.success.charge"] }}: </strong>
+
+{{ currency['symbol'] }}{{ (data['order']['price']*currency["value"]) }}
+ <br>
+          <strong> {{ lang["neworder.success.balance"] }}: </strong>{{ data['order']['balance'] }} <br>
+          
+         
+          
+          
+          
+          
+      </div>
+    {% endif %}
+    {% if data["order"]["success"] == 2 %}
+      <div class="alert alert-dismissible alert-success">
+         <strong> {{ lang["neworder.success.id"] }}: </strong> {{ data['order']['id'] }} <br>
+         <strong> {{ lang["neworder.success.service"] }}: </strong> {{ data['order']['service'] }} <br>
+         <strong> {{ lang["neworder.success.username"] }}: </strong> {{ data['order']['link'] }} <br>
+         <strong> {{ lang["neworder.success.quantity"] }}: </strong> {{ data['order']['min'] }} - {{ data['order']['max'] }} <br>
+         <strong> {{ lang["neworder.success.posts"] }}: </strong> {{ data['order']['posts'] }} <br>
+         <strong> {{ lang["neworder.success.delay"] }}: </strong>{{ data['order']['delay'] }} <br>
+         
+     
+        
+        
+       </div>
+    {% endif %}
+
+
+
+        <form method="post" action="">
+<div class="component_button_forms">
+            <div class="form-group">
+              <label for="orderform-category" class="control-label">{{ lang["neworder.category"] }}</label>
+              <select class="form-control" id="neworder_category" name="categories">
+                {% for category in categories %}
+                    <option value="{{ category["category_id"] }}" {% if category["category_id"] == data['categories'] %} selected {% endif %}>{{ category["category_name"] }}</option>
+                {% endfor %}
+                </select>
+</div>
+
+             
+            </div>
+            <div class="form-group">
+              <label for="orderform-service" class="control-label">{{ lang["neworder.service"] }}</label>
+              <select class="form-control" id="neworder_services" name="services">
+
+              </select>
+            </div>
+
+
+
+
+
+            <div id="neworder_fields"></div>
+
+
+<div class="form-group" id="charge_div">
+              <label for="charge" class="control-label">{{ lang["neworder.charge"] }}</label>
+              <input type="text" class="form-control" id="charge" readonly>
+            </div>
+
+
+
+
+          
+          <button type="submit" class="btn btn-primary btn-border btn-block">{{ lang["neworder.button"] }}</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div><!-- col (left)-->
+                <div class="col-md-6">
+                    <div class="card card-border mt-5 mt-md-0 mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="d-icon i-warning me-3">
+                                    <i class="ri-vip-crown-2-line"></i>
+                                </div>
+                                <span class="fw-600">Service Description</span>
+                            </div>
+                        </div><!-- ./card (title)  -->
+                    </div>
+                    <div class="card card-border">
+                        <div class="card-body no-serds">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="service-title mb-3"><span id="s_id"></span> - <span id="s_name"></span></h3>
+                                </div>
+                                <div class="col-12">
+                                    <div class="no-ser-box p-4 justify-content-center">
+                                        <div class="title text-center">
+                                            <span id="s_link" data-id="serviceLink">-</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="no-ser-box">
+                                        <div>
+                                            <div class="d-icon i-warning">
+                                                <i class="ri-timer-line"></i>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            Start Time
+                                        </div>
+                                        <div id="s_time" data-id="serviceStart" class="text w-color">0-1 Hour</div>
+                                    </div>
+                                </div><!-- ./col -->
+                                <div class="col-lg-6">
+                                    <div class="no-ser-box">
+                                        <div>
+                                            <div class="d-icon i-info">
+                                                <i class="ri-timer-line"></i>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            Speed
+                                        </div>
+                                        <div class="text i-color" data-id="serviceSpeed"></div>
+                                    </div>
+                                </div><!-- ./col -->
+                                <div class="col-lg-6">
+                                    <div class="no-ser-box">
+                                        <div>
+                                            <div class="d-icon i-primary">
+                                                <i class="ri-timer-line"></i>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            Guaranteed
+                                        </div>
+                                        <div class="text p-color" data-id="serviceRefill"></div>
+                                    </div>
+                                </div><!-- ./col -->
+                                <div class="col-lg-6">
+                                    <div class="no-ser-box">
+                                        <div>
+                                            <div class="d-icon i-secondary">
+                                                <i class="ri-timer-line"></i>
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            Avg Time
+                                        </div>
+                                        <div class="text s-color" ><span id="s_time"></span></div>
+                                    </div>
+                                </div><!-- ./col -->
+                            </div><!-- row -->
+                            <div class="no-ser-box long-text mb-0">
+                                <div id="s_desc" class="" data-id="serviceDesc">
+                                    ^^All of this information will be placed on the articles. We suggest using
+                                    real information incase readers want to contact to learn more about the
+                                    release, have questions, etc.<br /><br />
+
+                                    **All information above is not required. Just input what you want public.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- ./col (righ) -->
+            </div><!-- ./row -->
+        </section>
+    </div>
+</div>
+
+
+
+{% include 'footer2.twig' %}
+{% include 'footer.twig' %}
+
+

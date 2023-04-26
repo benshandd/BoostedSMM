@@ -1,0 +1,39 @@
+{% include 'header.twig' %}
+
+<div class="app-content blog-inner">
+	<div class="container">
+		<section class="bi-head-wrapper">
+			<div class="bi-head-box">
+				<div class="bi-head-content">
+					<div class="bi-title">
+						<h1>Read the BoostedSMM Blog</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="blog-content">
+			<div class="row">
+				{% for blog in blogs %}
+					<!-- Loop through all the blog posts -->
+					<div class="col-md-6 mb-4">
+						<div class="card card-border">
+							<div class="card-body p-4">
+								<div class="bi-content">
+									<h2 class="text-white">{{ blog.title }}</h2>
+									<p><img src="{{blog.image_file}}" alt=""></p>
+									<br><br>
+									<a href="/blog/{{ blog.blog_get }}" target="_blank" class="btn btn-primary">
+										Read More
+										<i class="fas fa-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</section>
+	</div>
+</div>
+
+{% include 'footer.twig' %}

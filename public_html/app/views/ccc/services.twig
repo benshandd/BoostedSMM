@@ -1,0 +1,140 @@
+{% include 'header.twig' %}
+
+
+<style>
+  .hidden,
+  [hidden] {
+    display: none;
+  }
+</style>
+<div class="app-content">
+  <div id="PageTitle">Services</div>
+  <div class="container-fluid ">
+    <section class="dashboard-head-wrapper">
+      <div class="dashboard-head card-border">
+        <img src="https://cdn.mypanel.link/fsvxaw/jy4zpe9929sfe0cm.png" class="mascot-img"/>
+        <div class="dhead-body">
+          <h2 class="title">
+            View our Services. If you need something Custom, let us know!
+          </h2>
+          <p class="text">
+            <a href="/tickets">Let us know</a>
+            if you are a reseller or marketing company. Please register and open a ticket to request a Reseller Service List.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="mb-4">
+      <div class="card card-border">
+        <div class="card-body">
+          <div class="row align-items-center">
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="col">
+                    <div class="services-list__table">
+                        <div class="table-bg component_table ">
+                            <div class="table-wr table-responsive">
+                                <table class="table" id="service-table"> 
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th class="nowrap">Service</th>
+                                        <th class="nowrap">Rate per 1000</th>
+                                        <th class="nowrap">Min order</th>
+                                        <th class="nowrap">Max order</th>
+<th class="nowrap" nowrap>
+                                                <div class="d-flex align-items-center">
+                                                    <span>Average time</span>
+                                                    <span class="ml-1 mr-1 fa fa-exclamation-circle" data-toggle="tooltip" data-placement="top" title="The average time is based on 10 latest completed orders per 1000 quantity."></span>
+                                                </div>
+                                            </th>
+                                                                                                                            <th class="hidden-xs hidden-sm service-description__th">Description</th>
+                                                                            </tr>
+                                    </thead>
+                                    <tbody>
+            
+
+              {% for category in serviceCategory %}
+                                                                                                            <tr class="services-list-category-title" data-filter-table-category-id="{{ category["category_id"] }}">
+                                                <td colspan="7">
+                                                   <div class="w-100 ">
+                                                       <div class="style-bg-primary-alpha-20 style-text-primary services-category">
+                                                           {{ category["category_name"] }}
+                                                       </div>
+                                                   </div>
+                                                </td>
+                                            </tr>
+
+
+                                                
+
+                {% for service in category['services'] %}
+                  <tr data-filter-table-category-id="{{ category["category_id"] }}">
+                    <td data-label="ID" data-filter-table-service-id="{{ service["service_id"] }}"><span id="service-{{ service["service_id"] }}">{{ service["service_id"] }}</span>
+                                        <a>
+                                            <span
+                                                data-clip="true"
+                                                title="Service id copied"
+                                                data-clipboard-action="copy"
+                                                data-clipboard-target="#service-{{ service["service_id"] }}"
+                                                class="fas fa-clone"></span>
+                                        </a></td>
+                    <td data-label="Service" class="table-service" data-filter-table-service-name="true">{{ service["service_name"] }}</td>
+                    
+                    <td>
+                      
+{{ currency['symbol'] }}{{ (service["service_price"]*currency["value"]) }}   
+
+
+                      
+
+                    </td>
+                    <td>{{ service["service_min"] }}</td>
+                    <td>{{ service["service_max"] }}</td>
+                    
+                    <td>{{ service["time"] }}</td>
+                     
+                     <td>
+                     <!-- Modal -->
+                        <div class="modal fade" id="servis{{ service["service_id"] }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{ service["service_name"] }} </h5> 
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">×</span>
+                                </button>
+                              </div>
+                              <div class="modal-body text-left">
+                                <p class="detail-data details-split-959"> {{ service["service_description"] }}</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-actions" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>{% if service["service_description"]  %}
+                        </div><a href="javascript:void(0)" class="btn btn-actions " data-toggle="modal" data-target="#servis{{ service["service_id"] }}">
+                         View
+                      </a>
+                  {% endif %} 
+                        </td>
+
+                  </tr>
+                {% endfor %}
+              {% endfor %}
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include 'footer2.twig' %}
+{% include 'footer.twig' %}

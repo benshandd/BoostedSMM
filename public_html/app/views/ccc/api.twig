@@ -1,0 +1,316 @@
+{% include 'header.twig' %}
+
+
+
+
+
+<div class="app-content api-page">
+    <div class="container">
+        <section class="api-title-section">
+            <div id="PageTitle">API Documents</div>
+        </section>
+        <section class="api-first">
+            <div class="row row-cols-lg-4 row-cols-md-2">
+                <div class="col">
+                    <div class="card card-border mb-4">
+                        <div class="card-body">
+                            <h4 class="api-title p-color">POST</h4>
+                            <span class="api-text">HTTP Method</span>
+                        </div>
+                    </div>
+                </div><!-- ./col -->
+                <div class="col">
+                    <div class="card card-border mb-4">
+                        <div class="card-body">
+                            <h4 class="api-title s-color">{{ site["url"] }}/api/v2</h4>
+                            <span class="api-text">API URL</span>
+                        </div>
+                    </div>
+                </div><!-- ./col -->
+                <div class="col">
+                    <div class="card card-border mb-4">
+                        <div class="card-body">
+                            <h4 class="api-title i-color">Get on the <a href="\account">Account</a> page</h4>
+                            <span class="api-text">API Key</span>
+                        </div>
+                    </div>
+                </div><!-- ./col -->
+                <div class="col">
+                    <div class="card card-border mb-4">
+                        <div class="card-body">
+                            <h4 class="api-title w-color">JSON</h4>
+                            <span class="api-text">Response Format</span>
+                        </div>
+                    </div>
+                </div><!-- ./col -->
+            </div>
+        </section>
+        <section class="api-section">
+            <div class="card card-border">
+                <div class="card-body mb-0">
+                    <div class="row mb-0 pb-2">
+                        <div class="col-lg mb-3 mb-lg-0">
+                            <h3 class="api-title">Service List</h3>
+                            <p class="api-text">Service List API Responses</p>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="row">
+                                <div class="col mb-4">
+                                    <h6>key</h6>
+                                    <p>Your API key</p>
+                                </div>
+                                <div class="col mb-4">
+                                    <h6>action</h6>
+                                    <p>services</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="api-section">
+            <pre class="code card card-border card-body">[
+    {
+        "service": 1,
+        "name": "Followers",
+        "type": "Default",
+        "category": "First Category",
+        "rate": "0.90",
+        "min": "50",
+        "max": "10000",
+        "refill": true
+    },
+    {
+        "service": 2,
+        "name": "Comments",
+        "type": "Custom Comments",
+        "category": "Second Category",
+        "rate": "8",
+        "min": "10",
+        "max": "1500",
+        "refill": false
+    }
+]</pre>
+        </section>
+        <section class="api-section">
+            <div class="card card-border">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col-md-7 col-lg-8 col-xxl-9">
+                            <h2 class="api-title mb-0">
+                                Add Order
+                            </h2>
+                        </div>
+                        <div class="col-md-5 col-lg-4 col-xxl-3 mt-3 mt-md-0">
+                            <select id="test" class="form-select">
+                                <option value="1">Default</option>
+                                <option value="2">Bla</option>
+                                <option value="2">Bla</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-4">
+                            <h6>key</h6>
+                            <p>Your API key</p>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6>action</h6>
+                            <p>add</p>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6>service</h6>
+                            <p>Service ID</p>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6>link</h6>
+                            <p>Link to page</p>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6>usernames</h6>
+                            <p>Usernames list separated by \r\n or \n</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="api-section">
+            <pre class="code card card-border card-body">{
+    "order": 23501
+}</pre>
+        </section>
+        <section class="api-section">
+            <div class="card card-border">
+                <div class="card-header">
+                    <h3 class="api-title mb-0">Order Status</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-4">
+                            <h6>key</h6>
+                            <p>Your API key</p>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6>action</h6>
+                            <p>status</p>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6>order</h6>
+                            <p>Order ID</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="api-section">
+            <pre class="code card card-border card-body">{
+    "charge": "0.27819",
+    "start_count": "3572",
+    "status": "Partial",
+    "remains": "157",
+    "currency": "USD"
+}</pre>
+        </section>
+
+        <section class="api-section">
+            <div class="card card-border">
+                <div class="card-header">
+                    <h3 class="api-title mb-0">Multiple orders status</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-4">
+                            <h6>key</h6>
+                            <p>Your API key</p>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6>action</h6>
+                            <p>status</p>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6>orders</h6>
+                            <p>Order IDs separated by comma</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="api-section">
+            <pre class="code card card-border card-body">{
+    "1": {
+        "charge": "0.27819",
+        "start_count": "3572",
+        "status": "Partial",
+        "remains": "157",
+        "currency": "USD"
+    },
+    "10": {
+        "error": "Incorrect order ID"
+    },
+    "100": {
+        "charge": "1.44219",
+        "start_count": "234",
+        "status": "In progress",
+        "remains": "10",
+        "currency": "USD"
+    }
+}</pre>
+        </section>
+
+        <section class="api-section">
+            <div class="card card-border">
+                <div class="card-header">
+                    <h3 class="api-title mb-0">Create refill</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-4">
+                            <h6>key</h6>
+                            <p>Your API key</p>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6>action</h6>
+                            <p>refill</p>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6>order</h6>
+                            <p>Order ID</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="api-section">
+            <pre class="code card card-border card-body">{
+    "refill": "1"
+}</pre>
+        </section>
+
+
+
+        <section class="api-section">
+            <div class="card card-border">
+                <div class="card-header">
+                    <h3 class="api-title mb-0">Get refill status</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-4">
+                            <h6>key</h6>
+                            <p>Your API key</p>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6>action</h6>
+                            <p>refill_status</p>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6>refill</h6>
+                            <p>Refill ID</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="api-section">
+            <pre class="code card card-border card-body">{
+    "status": "Completed"
+}</pre>
+        </section>
+
+        <section class="api-section">
+            <div class="card card-border">
+                <div class="card-header">
+                    <h3 class="api-title mb-0">User balance</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-4">
+                            <h6>key</h6>
+                            <p>Your API key</p>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h6>action</h6>
+                            <p>balance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="api-section">
+            <pre class="code card card-border card-body">{
+    "balance": "100.84292",
+    "currency": "USD"
+}</pre>
+        </section>
+
+
+    </div>
+</div>
+
+
+
+
+{% include 'footer.twig' %}

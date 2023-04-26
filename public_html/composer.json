@@ -1,0 +1,23 @@
+{
+    "name": "panelingo/new-smmpanel",
+    "description": "Panelingo tarafindan",
+    "type": "project",
+    "require": {
+        "twig/twig": "^2.5",
+        "phpmailer/phpmailer": "^6.0"
+    },
+    "authors": [
+        {
+            "name": "Dreampanel",
+            "email": "Dreampanel.in@gmail.com"
+        }
+    ]
+}
+{
+    "require": {
+        "php": ">=7.1",
+        "google/auth": "^1.9",
+        "google/cloud-core": "^1.32",
+        "kelvinmo/simplejwt": "^0.4.0"
+    }
+}

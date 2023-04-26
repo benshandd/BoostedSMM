@@ -1,0 +1,84 @@
+<script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+   
+
+  {{ footerCode }}
+
+
+
+
+<script type="text/javascript" src="public/ch3915babussofa4.js">
+      </script>
+  
+  <script type="text/javascript" src="public/xcz59lmywkfdgsp4.js">
+      </script>
+  <script type="text/javascript" src="public/wnzsoolloslhfumj.js">
+      </script>
+      <script type="text/javascript" src="public/cgtptn05b64bwcs4.js">
+      </script>
+<script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+
+{# <!-- Start Trigger Notification  modal -->   #}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js"></script>       
+ <script type="text/javascript" >
+    $("#notificationModal_1").on("hidden.bs.modal", function () {
+     var popIds = $(this).attr('popids');
+     console.log(this);
+            $.ajax({
+                type: 'POST',
+                url: 'ajax_data',
+                data: { 'action': "close_popup", 'popIds': popIds },
+                success: function(data) {
+                  
+                  }
+            });
+});
+
+
+ 
+   
+   
+   $('#notificationModal_1').modal('show');
+</script>     <!-- THEME CLONE BY NO_NAME -->                
+{# <!-- End Trigger Notification  modal --> #}
+
+
+
+
+
+
+
+  <script type="text/javascript" >
+     window.modules.layouts = {"auth":0};   </script>
+  <script type="text/javascript" >
+     window.modules.signin = [];   </script>
+  <script type="text/javascript" >
+      </script>
+					{% if settings['snow_effect'] == 1  %}<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.27.6/js/jquery.tablesorter.js"></script><script src="https://cdn.rentalpanel.com/toolkit.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://cdn.rentalpanel.com/application.v20.30.12.js"></script><script src="https://cdn.rentalpanel.com/main/lib/snf/snf.min.js"></script><script>(function() {
+$(document).snowfall({
+	round : true,
+	minSize: 1,
+	maxSize: 10,
+	minSpeed: 1,
+	maxSpeed: 5,
+	flakeCount : 100,
+	flakeColor: "{{ site['snow_colour']  }}"
+});
+})();</script>{% endif %}
+
+
+
+</script><script type="text/javascript" src="{{ site["url"] }}/public/modern/js/ajax.js">
+
+
+
+  {% for script in scriptList %}
+  <script type="text/javascript" src="{{ script }}"></script>
+  {% endfor %}
+
+   
+
+ 

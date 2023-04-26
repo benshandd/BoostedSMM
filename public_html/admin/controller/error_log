@@ -1,0 +1,9 @@
+[06-Mar-2021 07:13:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function route() in /home1/codeclub/perfect.codeclub.in/admin/controller/settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/codeclub/perfect.codeclub.in/admin/controller/settings.php on line 7
+[06-Mar-2021 07:22:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home1/codeclub/perfect.codeclub.in/admin/controller/settings.php:739
+Stack trace:
+#0 /home1/codeclub/perfect.codeclub.in/admin/controller/settings.php(4): general_setting()
+#1 {main}
+  thrown in /home1/codeclub/perfect.codeclub.in/admin/controller/settings.php on line 739

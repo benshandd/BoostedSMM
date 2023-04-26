@@ -1,0 +1,194 @@
+{% include 'header2.twig' %}
+<section class="register-page">
+    <div class="rp-content">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-6 order-2 order-md-1">
+                    <img src="https://cdn.smmspot.net/cloutsy/assets/img/register.png" class="rp-top-img" alt="">
+                    <h2 class="rp-left-title">Benefits of&nbsp; {{ site['site_name'] }}!</h2>
+                    <p class="rp-left-text">
+                        At&nbsp;{{ site["site_name"]}}, we're committed to providing you with the best social media
+                        marketing experience possible. That's why we offer a comprehensive range of services to boost
+                        your engagement, increase your followers, and take your online presence to the next level.
+                        <br><br>
+Our platform is user-friendly and easy to navigate, and our custom order management bot streamlines the process of managing your orders. Plus, we offer lightning-fast support, so you can rest assured that you'll always have the help you need.
+                        <br><br>
+Whether you're an influencer, business owner, or just looking to improve your personal brand, our team of experts is here to assist you every step of the way. We're dedicated to helping you achieve your social media goals, and we're confident that you'll see real results with&nbsp;{{ site["site_name"]}}.
+                        <br><br>
+So why wait? Sign up today and start seeing the benefits of&nbsp;{{ site["site_name"]}} for yourself. With us, you can trust that you're in good hands.
+                    </p>
+                    <h3 class="rp-left-s-title mb-4 pb-2">{{ site["site_name"]}} Experiences</h3>
+                    <div class="card card-border p-4 mt-4">
+                        <div class="testi-card">
+                            <div class="tc-top">
+                                <div class="tc-avatar">
+                                    <img src="https://i.postimg.cc/cHzyKmdm/fwefef.png" alt="Avatar"
+                                                class="tc-avatar-img">
+                                </div>
+                                <div class="tc-name">
+                                    Gary, Marketing
+                                </div>
+                                <div class="tc-stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                            <div class="tc-content">
+                                <p class="tc-text">
+                                    We've used various panels to resell services in the past, but&nbsp;{{
+                                    site["site_name"]}} is the only one that truly stands out. Their instant responses
+                                    and quick attention to inquiries are unparalleled. We are extremely impressed with
+                                    their level of customer service and will never consider using any other provider.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card card-border p-4 mt-4">
+                        <div class="testi-card">
+                            <div class="tc-top">
+                                <div class="tc-avatar">
+                                    <img src="https://i.postimg.cc/CKYFYmKn/man.png" alt="Avatar"
+                                                class="tc-avatar-img">
+                                </div>
+                                <div class="tc-name">
+                                    Charles, Real Estate
+                                </div>
+                                <div class="tc-stars">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                            <div class="tc-content">
+                                <p class="tc-text">
+                                    I always use these guys to send social signals to my home listings. It not only
+                                    helps with SEO, but also ensures that my listings show up almost instantly on
+                                    Google. Their service is very cool and I'm impressed with the results it delivers.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 offset-lg-2 order-1 order-md-2 mb-5 mb-md-0">
+                    <div class="d-inline-block">
+                        <a href="/" class="sd-back">
+                            <i class="ri-arrow-left-line me-3"></i>
+                            <span class="text">Back to Homepage</span>
+                        </a>
+                    </div>
+                    <div class="mt-5"></div>
+                    <div class="row align-items-center mb-4">
+                        <div class="col-auto">
+                            <div class="rp-icon">
+                                <i class="ri-login-circle-line"></i>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h3 class="rp-sign-up-title">Sign Up to &nbsp;{{ site['site_name'] }}</h3>
+                        </div>
+                    </div>
+
+
+
+                    {% if errorText %}
+                    <div class="alert alert-dismissible alert-danger">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        {{ errorText }}
+                    </div>
+                    {% endif %}
+                    {% if successText %}
+                    <div class="alert alert-dismissible alert-success">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        {{ successText }}
+                    </div>
+                    {% endif %}
+
+                    <form action="" method="POST">
+
+                        <div class="mb-4">
+                            <label for="mb-2" class="form-label">
+                                        <div class="d-flex align-items-center">
+                                             <div class="d-icon i-info me-2">
+                                                <i class="ri-vip-crown-2-line"></i>
+                                            </div>
+                                            <span class="i-color fw-600">Username</span>
+                                        </div>
+                                    </label>
+                            <input type="text" class="form-control" id="username" name="username" value="{{ data['username'] }}">
+                        </div>
+
+
+
+
+                        <div class="mb-4">
+                            <label for="mb-2" class="form-label">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-icon i-info me-2">
+                                                <i class="ri-vip-crown-2-line"></i>
+                                            </div>
+                                            <span class="i-color fw-600">Email</span>
+                                        </div>
+                                    </label>
+                            <input type="email" class="form-control" id="email" name="email" value="{{ data['email'] }}">
+                        </div>
+                        <div class="mb-4">
+                            <label for="mb-2" class="form-label">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-icon i-warning me-2">
+                                                <i class="ri-vip-crown-2-line"></i>
+                                            </div>
+                                            <span class="w-color fw-600">Password</span>
+                                        </div>
+                                    </label>
+                            <input type="password" class="form-control" id="password" name="password">
+                        </div>
+                        <div class="mb-4">
+                            <label for="mb-2" class="form-label">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-icon i-secondary me-2">
+                                                <i class="ri-vip-crown-2-line"></i>
+                                            </div>
+                                            <span class="s-color fw-600">Confirm Password</span>
+                                        </div>
+                                    </label>
+                            <input type="password" class="form-control" id="confirm" name="password_again">
+                        </div>
+                        <div class="mb-4">
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label>
+                                                <input type="checkbox" name="terms" value="1"> I have read and agreed with
+                                                <a href="/terms" target="_blank">Terms of Service</a>
+                                            </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="g-recaptcha form-group" data-sitekey="6LeF5rUaAAAAADYvG5QRSND25xaKUr_ba9EQ7PbY">
+                        </div>
+                        <input type="hidden" name="_csrf" value="QVvotTJ0i2WBSM1IaZIBQ8Aizmw_egQcv4twcB_VU0ogPrflUxjjF8wJuTEo-Ukor0eqKxIKd1H3-RExcrQrHg==">
+
+                        <button class="btn btn-primary btn-block btn-border" type="submit">
+                                    Sign up
+                                </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+{% include 'footer.twig' %}

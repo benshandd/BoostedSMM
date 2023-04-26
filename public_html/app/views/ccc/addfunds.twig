@@ -1,0 +1,345 @@
+{% include 'header.twig' %}
+
+
+<!-- Main variables *content* -->
+<!-- Event snippet for Add Funds conversion page -->
+	<script>
+gtag('event', 'conversion', {
+'send_to': 'AW-787628475/aMSFCNXGjKUBELuDyfcC',
+'transaction_id': ''
+});
+</script>
+	<div class="app-content"> <div id="PageTitle">Add Funds</div>
+	<div class="container-fluid">
+		<section class="dashboard-head-wrapper">
+			<div class="dashboard-head card-border">
+				<img src="https://cdn.mypanel.link/fsvxaw/pkemxikt27iwdbje.png" class="mascot-img"/>
+				<div class="dhead-body">
+					<h2 class="title">
+						How Do I Add Funds?
+					</h2>
+					<p class="text">
+						<a href="/tickets">Adding Funds is easy!
+						</a>Just select the method you want and input the amount in $ USD.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="w">
+			<div class="row row-cols-lg-3 row-cols-md-2">
+				<div class="col">
+					<div class="card card-border card-af-top">
+						<div class="p-4">
+							<div class="row align-items-center">
+								<div class="col-auto">
+									<div class="dh-icon icon-info">
+										<i class="ri-bank-card-line"></i>
+									</div>
+								</div>
+								<div class="col">
+									<p class="af-text">
+										To send a full financial spending report to your e-mail, please click
+										<a class="i-color" href="/tickets">here.</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ./col -->
+
+				<!-- ./col -->
+				<div class="col">
+					<div class="card card-border card-af-top">
+						<div class="p-4">
+							<div class="row align-items-center">
+								<div class="col-auto">
+									<div class="dh-icon icon-primary">
+										<i class="ri-money-dollar-box-line"></i>
+									</div>
+								</div>
+								<div class="col">
+									<p class="af-text">
+										If you want to send Bank Wire Transfers please
+										<a href="/tickets" class="p-color">contact us</a>
+										via tickets
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ./col -->
+			</div>
+			<!-- ./row -->
+		</section>
+		<section class="">
+			<div class="row">
+				<div class="col-lg-6 mb-4">
+					<div class="card card-border">
+						<div class="card-header">
+							<div class="row align-items-center">
+								<div class="col-md">
+									<h3 class="card-title">
+										Deposit Funds to your Wallet
+									</h3>
+								</div>
+								<div class="col-md-auto">
+									<ul class="nav nav-pills af-nav mb-3" id="addFunds-tab" role="tablist">
+										<li class="nav-item" role="presentation">
+											<button class="nav-link active" id="pills-add-funds-tab" data-bs-toggle="pill" data-bs-target="#pills-add-funds" type="button" role="tab" aria-controls="pills-add-funds" aria-selected="true">Add
+												                                                Funds</button>
+										</li>
+										{#<li class="nav-item" role="presentation">#}
+									{#    <button class="nav-link" id="pills-pm-history-tab" data-bs-toggle="pill"#}
+										{#        data-bs-target="#pills-pm-history" type="button" role="tab"#}
+										{#        aria-controls="pills-pm-history" aria-selected="false">Payment#}
+										{#        History</button>#}
+
+
+										{#</li>#}
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- ./card-header -->
+						<div class="card-body">
+							<div class="tab-content" id="addFunds-tabContent">
+								<div class="tab-pane fade show active" id="pills-add-funds" role="tabpanel" aria-labelledby="pills-add-funds-tab">
+									<form method="post" action="addfunds">
+
+										<div class="form-group">
+											<label for="method" class="control-label">{{ lang['addfunds.method'] }}</label>
+											<select class="form-control" id="payment_method" name="payment_type">
+												{% for payment in paymentsList %}
+													<option value="{{ payment['id'] }}" {% if data['payment_type'] == payment['id'] %} selected {% endif %}>{{ payment['method_name'] }}</option>
+												{% endfor %}
+											</select>
+										</div>
+
+										<div class="form-group">
+											<label for="method" class="control-label">{{ lang['addfunds.amount'] }}</label>
+											<input class="form-control" name="payment_amount" value="{{ data['payment_amount'] }}">
+										</div>
+
+										<button type="submit" class="btn btn-primary btn-border btn-block">{{ lang['addfunds.button'] }}</button>
+									</form>
+
+
+									{% if PaytmQR == 2 %}
+										<div id="tab-14" class="col-md-12">
+											<div class="well">
+												<div class="form-group">
+													<label for="method" class="control-label">Method</label>
+													<select class="form-control" id="payment_method" name="payment_type">
+														<option value="12">Paytm Business
+														</option>
+													</select>
+												</div>
+
+												<div class="panel-body">
+													<form method="post" action="addfunds">
+														<center><img width="85%" src="PUT YOUR PAYTM QR IMAGE LINK HERE ">
+
+
+														</center>
+														<div class="form-group col-md-12">
+															<label for="method" class="control-label">Amount</label>
+															<input class="form-control" name="payment_amount" value="{{ data['payment_amount'] }}">
+														</div>
+														<div class="form-group col-md-12">
+															<label for="method" class="control-label">Order ID</label>
+															<p>Enter Transaction/Order ID without spaces. Example - 202010122210100058</p>
+															<input class="form-control" name="paytmqr_orderid" value="{{ data['paytmqr_orderid'] }}">
+														</div>
+														<input type="hidden" class="form-control" name="payment_type" value="14">
+														<div class="col-md-12">
+															<button type="submit" class="btn btn-primary btn-border btn-block">Submit</button>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								{% endif %}
+
+
+								{#</div>#}
+
+
+								<div class="tab-pane fade" id="pills-pm-history" role="tabpanel" aria-labelledby="pills-pm-history-tab"></div>
+							</div>
+						</div>
+						<!-- ./card-body -->
+					</div>
+					<!-- ./card -->
+				</div>
+				<!-- ./col(left) -->
+				<div class="col-lg-6">
+
+					<ul class="nav nav-pills af-nav-pay mb-3" id="payMethods-tab" role="tablist">
+
+
+						{#<div class="tab-pane fade" id="pills-coinbase-tm" role="tabpanel"#}
+						{#    aria-labelledby="pills-coinbase-tm-tab">#}
+						{#    <h4 class="af-pm-title">Coinbase</h4>#}
+						{#    <p class="af-pm-about">Despoit Funds with Crypto-currency</p>#}
+						{#    <p class="af-pm-text">BTC, LTC, ETH and many more. Funds will be automatically added within 30 minutes.</p>#}
+						{#    <img src="https://cdn.smmspot.net/cloutsy/assets/img/pay/coinbase.svg" class="af-pm-img" alt="">#}
+						{#</div>#}
+							<li class="nav-item" role="presentation"> <button class="nav-link" id="pills-coinbase-tm-tab" data-bs-toggle="pill" data-bs-target="#pills-coinbase-tm" type="button" role="tab" aria-controls="pills-coinbase-tm" aria-selected="false">
+								<div class="icon">
+									<img src="https://cdn.smmspot.net/cloutsy/assets/img/pay/coinbase.svg" alt="Coinbase Logo">
+								</div>
+								<div class="text">Coinbase</div>
+							</button>
+						</li>
+						{#
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="pills-credit-card-tab" data-bs-toggle="pill" data-bs-target="#pills-credit-card" type="button" role="tab" aria-controls="pills-credit-card" aria-selected="false">
+								<div class="icon">
+									<img src="https://cdn.smmspot.net/cloutsy/assets/img/pay/credit.svg" alt="Credit Card Logo">
+								</div>
+								<div class="text">Payoneer</div>
+							</button>
+						</li>
+						#}
+					
+						{#<li class="nav-item" role="presentation">#}
+					{#    <button class="nav-link" id="pills-coinbase-tm-tab" data-bs-toggle="pill"#}
+						{#        data-bs-target="#pills-coinbase-tm" type="button" role="tab"#}
+						{#        aria-controls="pills-coinbase-tm" aria-selected="false">#}
+						{#        <div class="icon">#}
+						{#            <img src="https://cdn.smmspot.net/cloutsy/assets/img/pay/coinbase.svg" alt="Coinbase Logo">#}
+						{#        </div>#}
+						{#        <div class="text">Coinbase</div>#}
+						{#    </button>#}
+						{#</li>#}
+						{#<li class="nav-item" role="presentation">#}
+						{#    <button class="nav-link" id="pills-paypal-tm-tab" data-bs-toggle="pill"#}
+						{#        data-bs-target="#pills-paypal-tm" type="button" role="tab"#}
+						{#        aria-controls="pills-paypal-tm" aria-selected="false">#}
+						{#        <div class="icon">#}
+						{#            <img src="https://cdn.smmspot.net/cloutsy/assets/img/pay/paypal.svg" alt="Payeer Logo">#}
+						{#        </div>#}
+						{#        <div class="text">Paypal</div>#}
+						{#    </button>#}
+						{#</li>#}
+						{#<li class="nav-item" role="presentation">#}
+						{#    <button class="nav-link" id="pills-perfect-money-tm-tab" data-bs-toggle="pill"#}
+						{#        data-bs-target="#pills-perfect-money-tm" type="button" role="tab"#}
+						{#        aria-controls="pills-perfect-money-tm" aria-selected="false">#}
+						{#        <div class="icon">#}
+						{#            <img src="https://cdn.smmspot.net/cloutsy/assets/img/pay/pm.svg" alt="Payeer Logo">#}
+						{#        </div>#}
+						{#        <div class="text">Perfect Money</div>#}
+						{#    </button>#}
+						{#</li>#}
+					</ul>
+					<div class="card card-border">
+						<div class="card-body p-lg-5 p-4">
+							<div class="tab-content" id="payMethods-tabContent">
+
+
+								<div class="tab-pane fade" id="pills-credit-card" role="tabpanel" aria-labelledby="pills-credit-card-tab">
+									<h4 class="af-pm-title">Payoneer</h4>
+									<p class="af-pm-about">Log Into Your Payoneer, Then Go to 'Dashboard'.</p>
+									<p class="af-pm-text">2. On The Top Menu, Select 'Pay'.
+										3. On the Sub-Menu, Select 'Make A Payment'.</p>
+								</br>
+								4. Select 'To A Recipients Payoneer Account'.</br>
+							5. Enter Email: calipatac@gmail.com</br>
+						6. Enter The Amount You Want To Top-Up.</br>
+					7. Click Pay.</br>
+				8. Go to Your Emails, Find the 'Transaction ID'.</br>
+			9. Paste The Transaction ID & The Amount in the ticket section.</br>
+		10. The funds will be added manually within 6 hours.</p>
+
+</div>
+
+
+<div class="tab-pane fade" id="pills-pay-tm" role="tabpanel"
+                                    aria-labelledby="pills-pay-tm-tab">
+                                    <h4 class="af-pm-title">Skrill</h4>
+                                    <p class="af-pm-about">jaysonrexx@gmail.com</p>
+                                    <p class="af-pm-text">Log in and go to ‘Send’
+    2. Choose “Send to mobile number or email”</br>
+    3. Enter your recipient’s number or email</br>
+    4. Enter the amount you are sending</br>
+    5. Write a message for your recipient if you wish</br>
+    6. Confirm the amount and send</br>
+    Paste the transaction ID and the amount in the  ticket section and send it to us. The funds will be added manually within 6 hours.</p>
+                                    {#<img src="https://cdn.smmspot.net/cloutsy/assets/img/pay/pay-tm.svg" class="af-pm-img" alt="">#}
+                                </div>                 
+                                <div class="tab-pane fade" id="pills-coinbase-tm" role="tabpanel"
+                                    aria-labelledby="pills-coinbase-tm-tab">
+                                    <a href="https://commerce.coinbase.com/checkout/6c7902e7-63b0-458d-92d7-78e6cbd5d77c"target="_blank"><h4 class="af-pm-title">Coinbase</h4></a>
+                                    <p class="af-pm-about">Despoit Funds with Crypto-Currency</p>
+                                    <p class="af-pm-text">BTC, LTC, ETH and many more. Funds will be automatically added within 30 minutes.</p>
+1. Type the <b>Amount</b> and Press <b>Pay</b> 
+<br>2. Click on the Bitcoin at the bottom, you will be redirected to a checkout page.
+<br>3. Click on the <b>Crypto</b> you want to pay with.
+<br>4. Send the Provided <b>Crypto Amount</b> to the <b>Provided Address</b>.
+<br>5. The balance will be added at 1 Confirmation
+<br><br>Note: You can send payment from any type of wallet.<br><br>
+                                    <a href="https://commerce.coinbase.com/checkout/6c7902e7-63b0-458d-92d7-78e6cbd5d77c"target="_blank"><img src="https://cdn.smmspot.net/cloutsy/assets/img/pay/coinbase.svg" class="af-pm-img" alt=""></a>
+                                </div>
+                                
+                                {#<div class="tab-pane fade" id="pills-paypal-tm" role="tabpanel"#}
+                                {#    aria-labelledby="pills-paypal-tm-tab">#}
+                                {#    <h4 class="af-pm-title">PayPal</h4>#}
+                                {#    <p class="af-pm-about">Deposit Funds via Paypal</p>#}
+                                {#    <p class="af-pm-text">PayPal Payment options are only for VIP members. Minimum $100 deposit required.</p>#}
+                                {#    <img src="https://cdn.smmspot.net/cloutsy/assets/img/pay/paypal.svg" class="af-pm-img" alt="">#}
+                                {#</div>#}
+                                {#<div class="tab-pane fade" id="pills-perfect-money-tm" role="tabpanel"#}
+                                {#    aria-labelledby="pills-perfect-money-tm-tab">#}
+                                {#    <h4 class="af-pm-title">Perfect Money</h4>#}
+                                {#    <p class="af-pm-about">Deposit Funds via Perfect Money</p>#}
+                                {#    <p class="af-pm-text">Instantly add funds to your account with PerfectMoney.</p>#}
+                                {#    <img src="https://cdn.smmspot.net/cloutsy/assets/img/pay/pm.svg" class="af-pm-img" alt="">#}
+                                {#</div>#}
+                            </div>
+                        </div>
+                    </div>                   
+                    <br>
+      <div class="">         
+          <centre><h4 class="af-pm-title">Transaction History</h4></centre>
+              <div class="table-responsive custom-table">
+            <table class="table table-striped ">
+              <thead>
+            <tr>
+              <th>ID</th>
+              <th>Amount</th>
+              <th class="width-40">Method</th>
+              <th>Date</th>
+              <th class="nowrap">Transaction ID</th>
+            </tr>
+          </thead>
+          <tbody>
+<td colspan="9">
+            {% for transaction in transactions %}
+              <tr>
+                <td>{{ transaction['payment_id'] }}</td>          
+<td>       
+
+              {{ (transaction['payment_amount']*currency['value']) }} {{currency["symbol"]}}     
+              </td>  
+                <td class="width-40">{{ transaction['method_name'] }}</td>
+                <td>{{ transaction['payment_create_date'] }}</td>
+                <td class="nowrap">{{ transaction['payment_extra'] }}</td>
+                
+              </tr>
+            {% endfor %}
+</td>
+          </tbody>
+        </table>
+      </div>
+             
+                </div><!-- ./col(right) -->
+            </div>
+        </section>
+    </div>
+</div><!-- app-content -->
+
+{% include 'footer.twig' %}

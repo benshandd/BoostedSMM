@@ -1,0 +1,187 @@
+{% include 'header.twig' %}
+
+
+
+
+
+
+
+<div class="app-content">
+    <div id="PageTitle">Child Panel</div>
+    <div class="container-fluid">
+        <section class="dashboard-head-wrapper">
+            <div class="dashboard-head card-border">
+              	<img src="https://cdn.mypanel.link/fsvxaw/jy4zpe9929sfe0cm.png" 
+                     class="mascot-img" />
+                <div class="dhead-body">
+                    <h2 class="title">
+                        Rent a Child Panel
+                    </h2>
+               
+                </div>
+            </div>
+        </section>
+        <section class="cp-top">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-border">
+                        <div class="card-body p-4">
+                            <h3 class="cp-sns-title">Please Setup Your Nameservers:</h3>
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="cp-sns-dns">
+                                        <span>ns1.perfectpanel.com</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="cp-sns-dns">
+                                        <span>ns2.perfectpanel.com</span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                  <a href="https://who.is/" target="_blank">
+                                    <button class="btn btn-secondary btn-block">
+                                        What is my domain NS Records? 
+                                    </button>
+                                  </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- ./col  -->
+                <div class="col-md-6 mt-4 mt-md-0">
+                    <div class="card card-border cp-right-box">
+                        <div class="cp-r-img"></div>
+                        <div class="card-body">
+                            <h3 class="cp-r-title">Get a Custom Theme!</h3>
+                            <div class="cp-r-text">If you are VIP API Reseller you can get one of Exclusive&nbsp;{{ site["site_name"]  }}
+                                Panel themes
+                                for free.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cp-main">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card card-border mb-4">
+                        <div class="card-header">
+                            <h3 class="card-title">Rent a Child Panel</h3>
+                        </div>
+                        <div class="card-body">
+                            
+                            
+                            
+                            <br>
+{% if error %}
+      <div class="alert alert-dismissible alert-danger">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+        {{ errorText }}
+      </div>
+    {% endif %}  
+
+    {% if data["childpanel"]["success"] == 1 %}
+      <div class="alert alert-dismissible alert-success">
+          <strong> Order Id: </strong> {{ data['childpanel']['id'] }} <br>
+          <strong> Service: </strong> {{ data['childpanel']['service'] }} <br>
+          <strong> Domain: </strong> {{ data['childpanel']['link'] }} <br>
+          <strong> Quantity: </strong> {{ data['childpanel']['quantity'] }} <br>
+          <strong> Charge: </strong> {{ data['childpanel']['price'] }} <br>
+      </div>
+    {% endif %}
+                            
+                            
+                            
+                            
+   <form action="/child-panels" method="post">
+                                                        <div class="row">
+                                    <div class="col-12 col-md-6 mb-4">
+                                        <label for="mb-2" class="form-label">
+                                            <div class="d-flex align-items-center">
+                                                <div class="d-icon i-primary me-2">
+                                                    <i class="ri-vip-crown-2-line"></i>
+                                                </div>
+                                                <span class="p-color fw-600">Domain</span>
+                                            </div>
+                                        </label>
+                                <input type="text" class="form-control" name="domain" placeholder="Domain" required>
+                                
+                                
+                                    </div><!-- col -->
+                                    <div class="col-12 col-md-6 mb-4">
+                                        <label for="mb-2" class="form-label">
+                                            <div class="d-flex align-items-center">
+                                                <div class="d-icon i-secondary me-2">
+                                                    <i class="ri-vip-crown-2-line"></i>
+                                                </div>
+                                                <span class="s-color fw-600">Currency</span>
+                                            </div>
+                                        </label>
+                                        <select id="createorderform-currency" class="form-select" name="CreateOrderForm[currency]"
+                                    aria-required="true">
+                                                                    <option value="USD">United States Dollars (USD)</option>
+<option value="INR">Indian Rupee (INR)</option>
+                                                            </select>
+                                    </div><!-- col -->
+                                    <div class="col-12 col-md-12 mb-4">
+                                        <label for="mb-2" class="form-label">
+                                            <div class="d-flex align-items-center">
+                                                <div class="d-icon i-info me-2">
+                                                    <i class="ri-vip-crown-2-line"></i>
+                                                </div>
+                                                <span class="info-color fw-600">Admin Username</span>
+                                            </div>
+                                        </label>
+                           <input type="text" class="form-control" name="username" placeholder="Username" required>
+                           
+                           
+                           
+                                    </div><!-- col -->
+                                    <div class="col-12 col-md-6 mb-4">
+                                        <label for="mb-2" class="form-label">
+                                            <div class="d-flex align-items-center">
+                                                <div class="d-icon i-danger me-2">
+                                                    <i class="ri-vip-crown-2-line"></i>
+                                                </div>
+                                                <span class="d-color fw-600">Admin Password</span>
+                                            </div>
+                                        </label>
+                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+
+                                    </div><!-- col -->
+                                    <div class="col-12 col-md-6 mb-4">
+                                        <label for="mb-2" class="form-label">
+                                            <div class="d-flex align-items-center">
+                                                <div class="d-icon i-warning me-2">
+                                                    <i class="ri-vip-crown-2-line"></i>
+                                                </div>
+                                                <span class="w-color fw-600">Confirm Password</span>
+                                            </div>
+                                        </label>
+                            <input type="password" class="form-control" name="password_confirm" placeholder="Password" required>
+                                    </div><!-- col -->
+                                </div><!-- ./row -->
+                             <input type="hidden" name="_csrf" value="R8LATBnkTMKczjwN38kub8P8u6hWVRjXyPntr8aL3Xcmp58ceIgksNGPSHSeomYErJnf73sla5qAi4zuq-qlIw==">
+
+                                <button type="submit" class="btn btn-primary btn-block btn-border">Submit {{ currency['symbol'] }}{{ (site['childpanel_price']*currency["value"]) }}</button>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- ./col -->
+                <div class="col-lg-6">
+                    
+                        </div><!-- ./aq-item -->
+                    </div>
+                </div><!-- ./col -->
+            </div><!-- ./row -->
+        </section>
+    </div>
+</div>
+
+
+
+
+
+
+{% include 'footer.twig' %}
