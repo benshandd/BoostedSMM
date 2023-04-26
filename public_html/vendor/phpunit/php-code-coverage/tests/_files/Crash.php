@@ -1,2 +1,3 @@
-<?php
-class {CLASS}
+class MyClass {
+    // class definition
+}
